@@ -1,6 +1,6 @@
-@model SpeakerViewModel
+@model UserViewModel
 
-<form asp-controller="Speakers" asp-action="Create" method="post">
+<form asp-controller="User" asp-action="Create" method="post">
     <div>
         <label asp-for="FirstName"></label>: <input type="text" asp-for="FirstName" />
         <span asp-validation-for="FirstName"></span>
@@ -9,9 +9,6 @@
         <label asp-for="LastName"></label>: <input type="text" asp-for="LastName" />
         <span asp-validation-for="LastName"></span>
     </div>
-    <div>
-        <label asp-for="EmailAddress"></label>: <input type="text" asp-for="EmailAddress" />
-        <span asp-validation-for="EmailAddress"></span>
-    </div>
+
     <button>Create</button>
 </form>
