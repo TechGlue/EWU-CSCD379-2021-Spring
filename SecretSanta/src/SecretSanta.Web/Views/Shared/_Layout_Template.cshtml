@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>UserGroup - @ViewBag.Title</title>
+    <title>SecretSanta - @ViewBag.Title</title>
     <!-- Stylesheets -->
-    <% for (var filename in htmlWebpackPlugin.files.css) { %>
-    <link href="~<%= htmlWebpackPlugin.files.css[filename] %>" rel="stylesheet" />
-    <% } %>
+        <% for (var filename in htmlWebpackPlugin.files.css) { %>
+        <link href="~<%= htmlWebpackPlugin.files.css[filename] %>" rel="stylesheet" />
+        <% } %>
+  
     <!-- End Stylesheets -->
 </head>
 <body>
@@ -21,9 +22,12 @@
     @RenderBody()
 
     <!-- Scripts -->
-    <% for (var index in htmlWebpackPlugin.files.js) { %>
-    <script src="~<%= htmlWebpackPlugin.files.js[index] %>"></script>
-    <% } %>
+    
+    
+       <% for (var index in htmlWebpackPlugin.files.js) { %>
+       <script src="~<%= htmlWebpackPlugin.files.js[index] %>"></script>
+       <% } %>
+
     <!-- End Scripts -->
 </body>
 </html>
