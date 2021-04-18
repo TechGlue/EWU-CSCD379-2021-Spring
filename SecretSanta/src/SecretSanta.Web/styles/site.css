@@ -1,6 +1,21 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
-nav{
-    
+
+@layer components {
+    .btn{
+        @apply hover:bg-indigo-400 border border-blue-800 rounded-xl py-2 px-4 bg-blue-200 inline-block;
+    }    
+}
+@layer utilities{
+    .input-validation-error{
+        @apply border-red-200 focus:border-red-800; 
+    }
+}
+
+.inHDR{
+    @apply bg-green-500 text-white flex flex-col sm:flex-row justify-between p-6;
+}
+.li{
+    @apply sm:px-6 leading-10;
 }

@@ -3,6 +3,6 @@
 <form asp-controller="Gifts" asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
     @await Html.PartialAsync("_CreateOrEdit")
-    <button class = "border border-blue-800 rounded-xl py-2 bg-blue-200 leading-10 mr-6">Update</button>
-    <a class = "border border-blue-800 rounded-xl py-2 px-4 bg-blue-200 inline-block leading-10" asp-controller="Gifts" asp-action="Index">Cancel</a>
+    <button class = "btn mr-6">Update</button>
+    <a class = "btn inline-block" asp-controller="Gifts" asp-action="Index">Cancel</a>
 </form>

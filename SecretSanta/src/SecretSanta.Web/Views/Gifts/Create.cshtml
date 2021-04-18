@@ -3,5 +3,5 @@
 <form asp-controller="Gifts" asp-action="Create" method="post">
     @await Html.PartialAsync("_CreateOrEdit")
     <button class = "btn mr-6">Create</button>
-    <a class = "btn bg-red-400 inline-block"asp-controller="Gifts" asp-action="Index">Cancel</a>
+    <a class = "bg-red-400 btn inline-block" asp-controller="Gifts" asp-action="Index">Cancel</a>
 </form>
