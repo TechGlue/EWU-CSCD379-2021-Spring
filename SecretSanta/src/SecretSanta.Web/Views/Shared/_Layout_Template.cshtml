@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width"/>
-    <title>SecretSanta - @ViewBag.Title</title>
+    <title>SecretSanta</title>
     <!-- Stylesheets -->
     <% for (var filename in htmlWebpackPlugin.files.css) { %>
     <link href="~<%= htmlWebpackPlugin.files.css[filename] %>" rel="stylesheet"/>
@@ -14,14 +14,11 @@
 <header class="inHDR">
     <div class = "flex flex-row justify-between">
         <a class="text-2xl leading-10" asp-controller="Home" asp-action="Index">SecretSanta</a>
-        <button class ="sm:hidden"><i class="fas fa-bars align-middle h-full text-2xl"></i></button>
+        <button class="sm:hidden" onclick = "togglemenujs()"><i class="fas fa-bars align-middle h-full text-2xl"></i></button>
     </div>
 
-    <nav class = "hidden sm:inline-block">
+    <nav id="headerNav" class = "hidden sm:inline-block">
         <ul class="flex flex-col sm:flex-row">
-            <li class="li">
-                <a asp-controller="Home" asp-action="Index">Home</a>
-            </li>
             <li class="li">
                 <a asp-controller="Users" asp-action="Index">Users</a>
             </li>
@@ -44,5 +41,18 @@
 <% } %>
 
 <!-- End Scripts -->
+<script>
+function togglemenujs(){
+    var headerNav = document.getElementById("headerNav");
+    if (headerNav){
+        if (headerNav.classList.contains("hidden")){
+            headerNav.classList.remove("hidden");
+        }else{
+            headerNav.classList.add("hidden");
+        }
+    }
+}
+    
+</script>
 </body>
 </html>

@@ -1,11 +1,18 @@
 @model List<GroupViewModel>
 
-@{int counter = 0;}
-
-@foreach(var groupViewModel in Model) {
-    <section>
-        @groupViewModel.Name <a asp-action="Edit" asp-route-id=@counter>Edit</a><form asp-action="Delete" asp-route-id=@counter method="post"><button>X</button></form>
-        @{counter++;}
-    </section>
-}
-<a asp-action="Create">Create</a>
+@{var counter = 0;}
+<section class="md:grid md:grid-cols-3 sm:grid sm:grid-cols-1 ">
+    @foreach (var groupViewModel in Model)
+    {
+    
+        <section class="border-gray-500 border-2 p-6 m-5 rounded-lg bg-red-600 bg-opacity-50">
+            @groupViewModel.Name <a asp-action="Edit" asp-route-id=@counter><i class="fas fa-edit"></i></a>
+            <form asp-action="Delete" asp-route-id=@counter method="post">
+                <button onclick="return confirm('You are about to delete @groupViewModel.Name. Are you sure you want to do this?');"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            @{counter++;}
+        </section>
+       
+    }
+</section>
+<a asp-action="Create" class="bg-opacity-50 bg-green-600 border-gray-500 border-2 p-2 m-5 my-9 rounded-lg">Create</a>

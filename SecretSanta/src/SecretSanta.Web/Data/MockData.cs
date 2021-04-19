@@ -18,6 +18,10 @@ namespace SecretSanta.Web.Data
         {
             new GroupViewModel { Id = 1, Name = "GoonSquad" },
             new GroupViewModel { Id = 2, Name = "Rodents Of Unusual Size" },
+            new GroupViewModel { Id = 1, Name = "GoonSquad" },
+            new GroupViewModel { Id = 2, Name = "Rodents Of Unusual Size" },
+            new GroupViewModel { Id = 1, Name = "GoonSquad" },
+            new GroupViewModel { Id = 2, Name = "Rodents Of Unusual Size" }
         };
 
         public static List<GiftViewModel> Gifts = new List<GiftViewModel>
