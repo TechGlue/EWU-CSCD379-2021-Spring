@@ -1,7 +1,7 @@
 @model List<GiftViewModel>
 
 @{var counter = 0;}
-<section class="md:grid md:grid-cols-3 sm:grid sm:grid-cols-1">
+<section class="md:grid-cols-3 grid grid-cols-1">
 
     @foreach (var groupViewModel in Model)
     {
@@ -20,4 +20,4 @@
 
 </section>
 
-<a asp-action="Create" class="bg-opacity-50 bg-green-600 border-gray-500 border-2 p-2 m-5 my-9 ml-5 rounded-lg">Create</a>
+<a asp-action="Create" class="bg-opacity-50 bg-green-600 border-gray-500 border-2 p-2 m-5 my-9 ml-5 rounded-lg hover:bg-blue-200">Create</a>
