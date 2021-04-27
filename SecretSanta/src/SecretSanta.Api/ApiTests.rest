@@ -13,7 +13,8 @@ GET {{host}}/api/Users/3
 DELETE {{host}}/api/Users/0
 
 ###
-POST {{host}}/api/Users Content-Type: {{contentType}}
+POST {{host}}/api/Users 
+Content-Type: {{contentType}}
 
 {
     "Id":"1",
@@ -22,7 +23,8 @@ POST {{host}}/api/Users Content-Type: {{contentType}}
 }
 
 ###
-PUT {{host}}/api/Users/ Content-Type: {{contentType}}
+PUT {{host}}/api/Users/1
+Content-Type: {{contentType}}
 
 {
     "Id":1,

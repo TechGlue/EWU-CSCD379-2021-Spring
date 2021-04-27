@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using SecretSanta.Data;
+using SecretSanta.Api.Dto;
 using SecretSanta.Business;
+using SecretSanta.Data;
+
 
 namespace SecretSanta.Api.Controllers
 {
@@ -61,7 +63,7 @@ namespace SecretSanta.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody]User? updatedUser)
+        public ActionResult Put(int id, [FromBody]UpdateUser? updatedUser)
         {
             if(updatedUser is null){
                 return BadRequest();
@@ -70,10 +72,13 @@ namespace SecretSanta.Api.Controllers
             User? foundUser = UserManager.GetItem(id);
 
             if(foundUser is not null){
-                if(!string.IsNullOrWhiteSpace(updatedUser.FirstName) || !string.IsNullOrWhiteSpace(updatedUser.LastName)){
+                if(!string.IsNullOrWhiteSpace(updatedUser.FirstName)){
                     foundUser.FirstName = updatedUser.FirstName;
+                }
+                if(!string.IsNullOrWhiteSpace(updatedUser.LastName)){
                     foundUser.LastName = updatedUser.LastName;
                 }
+                
                 UserManager.Save(foundUser);
                 return Ok();
             }
