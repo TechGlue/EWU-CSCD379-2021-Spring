@@ -60,18 +60,25 @@ namespace SecretSanta.Api.Controllers
             return UserManager.Create(myUser);
         }
 
-        // [HttpPut("{id}")]
-        // public ActionResult Put(int id, ){
-        //     if(updatedUser is null)
-        //     {
-        //         return BadRequest();
-        //     }
-        //     User? foundUser = UserManager.GetItem(id);
-        //     if(foundUser is not null){
-        //         if(!string.IsNullOrWhiteSpace(updatedUser.fir))
-        //     }
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, [FromBody]User? updatedUser)
+        {
+            if(updatedUser is null){
+                return BadRequest();
+            }
 
-        // }
+            User? foundUser = UserManager.GetItem(id);
+
+            if(foundUser is not null){
+                if(!string.IsNullOrWhiteSpace(updatedUser.FirstName) || !string.IsNullOrWhiteSpace(updatedUser.LastName)){
+                    foundUser.FirstName = updatedUser.FirstName;
+                    foundUser.LastName = updatedUser.LastName;
+                }
+                UserManager.Save(foundUser);
+                return Ok();
+            }
+            return NotFound();
+        }
 
 
 
