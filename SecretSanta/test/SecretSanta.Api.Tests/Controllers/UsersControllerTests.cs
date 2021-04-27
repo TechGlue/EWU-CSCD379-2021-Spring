@@ -49,16 +49,62 @@ namespace SecretSanta.Api.Tests.Controllers
         public void get_WithID_ReturnsUserManagerUser(int id)
         {
             //Arange
-            UserManager manager = new();
-            UsersController controller = new UsersController(manager);
+            TestableUserManager manager = new();
+            UsersController controller = new (manager);
             User expectedUser = new();
-            //manager.GetItem() = expectedUser;
+            manager.GetItemUser = expectedUser;
 
             //Act
-            // ActionResult<User?> result = controller.Get(id);
-            // //Assert
-            // Assert.AreEqual(id, manager.GetItem(id));
-            // Assert.AreEqual(expectedUser, result.Value);
+            ActionResult<User?> result = controller.Get(id);
+            //Assert
+            Assert.AreEqual(id, manager.GetItem(id));
+            Assert.AreEqual(expectedUser, result.Value);
+        }
+
+        [TestMethod]
+        public void Get_WithNegativeID_ReturnsNotFound(){
+            //Arrange
+            TestableUserManager manager = new();
+            UsersController controller = new (manager);
+            User expectedUser = new();
+            manager.GetItemUser = expectedUser;
+
+            //Act
+            ActionResult<User?> result = controller.Get(-1);
+
+            //Assert
+            Assert.IsTrue(result.Result is NotFoundResult);
+        }
+
+        private class TestableUserManager : UserManager
+        {
+            public User Create(User item)
+            {
+                throw new System.NotImplementedException();
+            }
+            public User? GetItemUser{get; set;}
+            public int GetItemId{get; set;}
+
+            public User? GetItem(int id)
+            {
+                GetItemId = id;
+                return GetItemUser;
+            }
+
+            public ICollection<User> List(){
+                throw new System.NotImplementedException();
+            }
+
+            public bool Remove(int id){
+                throw new System.NotImplementedException();
+            }
+
+            public void Save(User item){
+                throw new System.NotImplementedException();
+            }
+
+
+
         }
 
     }
