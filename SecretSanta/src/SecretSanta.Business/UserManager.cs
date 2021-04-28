@@ -8,25 +8,25 @@ namespace SecretSanta.Business
     public class UserManager : IUserRepository
     {
         public User Create(User item){
-            DeleteMe.Users.Add(item);
+            UserBase.Users.Add(item);
             return item;
         }
 
         public ICollection<User> List(){
-            return DeleteMe.Users;
+            return UserBase.Users;
         }
 
         public User? GetItem(int id){
             if(id < 0){
                 throw new ArgumentOutOfRangeException(nameof(id));
             }
-            return DeleteMe.Users.FirstOrDefault(x => x.Id == id);
+            return UserBase.Users.FirstOrDefault(x => x.Id == id);
         }
         public bool Remove(int id){
-            User? foundUser = DeleteMe.Users.FirstOrDefault(x => x.Id == id);
+            User? foundUser = UserBase.Users.FirstOrDefault(x => x.Id == id);
 
             if(foundUser is not null){
-                DeleteMe.Users.Remove(foundUser);
+                UserBase.Users.Remove(foundUser);
                 return true;
             }
             return false;
@@ -36,7 +36,5 @@ namespace SecretSanta.Business
             Remove(item.Id);
             Create(item);
         }
-    
-
     }
 }

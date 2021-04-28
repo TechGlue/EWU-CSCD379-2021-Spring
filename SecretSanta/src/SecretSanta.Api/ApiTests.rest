@@ -1,5 +1,5 @@
-@hostname =localhost 
-@port =5101 
+@hostname = localhost 
+@port = 5101 
 @host = https://{{hostname}}:{{port}} 
 @contentType = application/json
 
@@ -17,7 +17,7 @@ POST {{host}}/api/Users
 Content-Type: {{contentType}}
 
 {
-    "Id":"1",
+    "Id":"32",
     "FirstName":"Luis", 
     "LastName":"fsdfdsf"
 }

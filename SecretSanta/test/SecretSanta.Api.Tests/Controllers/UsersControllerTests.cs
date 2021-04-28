@@ -22,7 +22,8 @@ namespace SecretSanta.Api.Tests.Controllers
             try
             {
                 new UsersController(null!);
-            }catch(ArgumentException e)
+            }
+            catch(ArgumentException e)
             {
                 Assert.AreEqual("userManager", e.ParamName);
                 return;
@@ -44,20 +45,20 @@ namespace SecretSanta.Api.Tests.Controllers
         }
 
         [TestMethod]
-        [DataRow(420)]
         [DataRow(42)]
+        [DataRow(98)]
         public void get_WithID_ReturnsUserManagerUser(int id)
         {
             //Arange
             TestableUserManager manager = new();
-            UsersController controller = new (manager);
+            UsersController controller = new(manager);
             User expectedUser = new();
             manager.GetItemUser = expectedUser;
 
             //Act
             ActionResult<User?> result = controller.Get(id);
             //Assert
-            Assert.AreEqual(id, manager.GetItem(id));
+            Assert.AreEqual(id, manager.GetItemId);
             Assert.AreEqual(expectedUser, result.Value);
         }
 
@@ -76,7 +77,7 @@ namespace SecretSanta.Api.Tests.Controllers
             Assert.IsTrue(result.Result is NotFoundResult);
         }
 
-        private class TestableUserManager : UserManager
+        private class TestableUserManager : IUserRepository
         {
             public User Create(User item)
             {
@@ -102,11 +103,6 @@ namespace SecretSanta.Api.Tests.Controllers
             public void Save(User item){
                 throw new System.NotImplementedException();
             }
-
-
-
         }
-
     }
-
 }

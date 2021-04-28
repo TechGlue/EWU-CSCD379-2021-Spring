@@ -34,7 +34,6 @@ namespace SecretSanta.Api
             {
                 endpoints.MapControllers();
             });
-         
         }
     }
 }

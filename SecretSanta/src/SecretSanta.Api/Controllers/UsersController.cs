@@ -19,7 +19,6 @@ namespace SecretSanta.Api.Controllers
             UserManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
 
-        //https://localhost:5101/api/Users
         [HttpGet]
         public IEnumerable<User> Get()
         {
