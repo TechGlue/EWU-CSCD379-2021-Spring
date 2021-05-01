@@ -1,11 +1,24 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SecretSanta.Web.Api;
 using SecretSanta.Web.Data;
 using SecretSanta.Web.ViewModels;
+using System;
+
+
 
 namespace SecretSanta.Web.Controllers
 {
     public class UsersController : Controller
     {
+
+        public IUsersClient Client {get;}
+
+        public UsersController(IUsersClient client){
+            client = client ?? throw new ArgumentNullException(nameof(client));
+        }
+
         public IActionResult Index()
         {
             return View(MockData.Users);
