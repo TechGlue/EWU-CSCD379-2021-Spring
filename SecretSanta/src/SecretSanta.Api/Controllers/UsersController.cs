@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SecretSanta.Business;
 using SecretSanta.Data;
+using SecretSanta.Api.Dto;
 
 namespace SecretSanta.Api.Controllers
 {
@@ -33,6 +34,8 @@ namespace SecretSanta.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult Delete(int id)
         {
             if (Repository.Remove(id))
@@ -43,6 +46,8 @@ namespace SecretSanta.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         public ActionResult<User?> Post([FromBody] User? user)
         {
             if (user is null)
@@ -53,7 +58,7 @@ namespace SecretSanta.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] User? user)
+        public ActionResult Put(int id, [FromBody] UpdateUser? user)
         {
             if (user is null)
             {
@@ -61,6 +66,7 @@ namespace SecretSanta.Api.Controllers
             }
 
             User? foundUser = Repository.GetItem(id);
+            
             if (foundUser is not null)
             {
                 foundUser.FirstName = user.FirstName ?? "";
