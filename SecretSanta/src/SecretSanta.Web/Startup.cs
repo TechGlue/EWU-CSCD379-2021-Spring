@@ -18,7 +18,7 @@ namespace SecretSanta.Web
 
         public static System.Net.Http.HttpClient ApiClient = new ()
         {
-            BaseAddress = new Uri("http://localhost:5001")
+            BaseAddress = new Uri("https://localhost:5101")
         };
         public void ConfigureServices(IServiceCollection services)
         {

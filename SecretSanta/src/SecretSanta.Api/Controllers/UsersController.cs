@@ -66,7 +66,6 @@ namespace SecretSanta.Api.Controllers
             }
 
             User? foundUser = Repository.GetItem(id);
-            
             if (foundUser is not null)
             {
                 foundUser.FirstName = user.FirstName ?? "";

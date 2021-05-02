@@ -10,7 +10,6 @@ namespace SecretSanta.Web.Controllers
 {
     public class UsersController : Controller
     {
-
         public IUsersClient Client {get;}
 
         public UsersController(IUsersClient client)
@@ -21,15 +20,17 @@ namespace SecretSanta.Web.Controllers
         public async Task<IActionResult> Index()
         {
             ICollection<User> users = await Client.GetAllAsync();
-            List<UserViewModel> viewModelUser = new();
-            foreach(User e in users){
-                viewModelUser.Add(new UserViewModel{
+            List<UserViewModel> viewModelUsers = new();
+            foreach(User e in users)
+            {
+                viewModelUsers.Add(new UserViewModel
+                {
                     Id = e.Id,
                     FirstName = e.FirstName,
                     LastName = e.LastName
                 });
-                            }
-            return View(viewModelUser);
+            }
+            return View(viewModelUsers);
         }
 
         public IActionResult Create()

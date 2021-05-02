@@ -95,7 +95,7 @@ namespace SecretSanta.Web.Api
         public async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<User>> GetAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append("/api/Users");
+            urlBuilder_.Append("api/Users");
     
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -165,7 +165,7 @@ namespace SecretSanta.Web.Api
         public async System.Threading.Tasks.Task<object> PostAsync(User user, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append("/api/Users");
+            urlBuilder_.Append("api/Users");
     
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -243,7 +243,7 @@ namespace SecretSanta.Web.Api
                 throw new System.ArgumentNullException("id");
     
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append("/api/Users/{id}");
+            urlBuilder_.Append("api/Users/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
     
             var client_ = _httpClient;
@@ -319,7 +319,7 @@ namespace SecretSanta.Web.Api
                 throw new System.ArgumentNullException("id");
     
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append("/api/Users/{id}");
+            urlBuilder_.Append("api/Users/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
     
             var client_ = _httpClient;
@@ -394,7 +394,7 @@ namespace SecretSanta.Web.Api
                 throw new System.ArgumentNullException("id");
     
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append("/api/Users/{id}");
+            urlBuilder_.Append("api/Users/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
     
             var client_ = _httpClient;
@@ -572,7 +572,9 @@ namespace SecretSanta.Web.Api
     
         [Newtonsoft.Json.JsonProperty("LastName", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        public string LastName { get; set;}
+        public string LastName { get; set; }
+    
+    
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.1.0 (Newtonsoft.Json v12.0.0.0)")]
