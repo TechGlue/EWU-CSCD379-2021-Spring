@@ -18,11 +18,11 @@ namespace SecretSanta.Web
 
         public static System.Net.Http.HttpClient ApiClient = new ()
         {
-            BaseAddress = new Uri("http://localhost:50101")
+            BaseAddress = new Uri("http://localhost:5001")
         };
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IUsersClient, UsersClient>(_ => new UsersClient(ApiClient));
+            services.AddScoped<IUsersClient, UsersClient>(_=> new UsersClient(ApiClient));
             services.AddControllersWithViews();
         }
 

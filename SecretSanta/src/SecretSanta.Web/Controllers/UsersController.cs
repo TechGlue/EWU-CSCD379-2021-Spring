@@ -6,8 +6,6 @@ using SecretSanta.Web.Data;
 using SecretSanta.Web.ViewModels;
 using System;
 
-
-
 namespace SecretSanta.Web.Controllers
 {
     public class UsersController : Controller
@@ -15,8 +13,9 @@ namespace SecretSanta.Web.Controllers
 
         public IUsersClient Client {get;}
 
-        public UsersController(IUsersClient client){
-            client = client ?? throw new ArgumentNullException(nameof(client));
+        public UsersController(IUsersClient client)
+        {
+            Client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
         public async Task<IActionResult> Index()
