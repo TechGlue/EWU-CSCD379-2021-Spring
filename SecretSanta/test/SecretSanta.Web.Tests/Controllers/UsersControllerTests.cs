@@ -51,8 +51,8 @@ namespace SecretSanta.Web.Tests
             TestableUsersClient usersClient = Factory.Client;
             HttpClient client = Factory.CreateClient();
 
-            List<User> users = new(){
-                new User(){Id = 0, }
+            List<User> u = new(){
+                new User(){Id = 0,FirstName = "Luis", LastName = "Garcia" }
             };
  
             User newUser = new()
@@ -60,6 +60,7 @@ namespace SecretSanta.Web.Tests
                 FirstName = "Luis",
                 LastName = "Garcia"
             };
+
             string json = System.Text.Json.JsonSerializer.Serialize(newUser);
             StringContent content = new(json);
             //Act
