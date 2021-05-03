@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SecretSanta.Web.Api;
 using SecretSanta.Web.Tests.Api;
+using SecretSanta.Web.ViewModels;
 
 namespace SecretSanta.Web.Tests
 {
@@ -41,17 +43,33 @@ namespace SecretSanta.Web.Tests
             Assert.AreEqual(1,usersClient.GetAllAsyncInvocationCount);
         }
 
+        //currently failing retry 
         [TestMethod]
-        public async Task Edit_WithValidModel_InvokePostAsync()
+        public async Task Create_WithValidModel_InvokePostAsync()
         {
             //Arrange
             TestableUsersClient usersClient = Factory.Client;
             HttpClient client = Factory.CreateClient();
+
+            List<User> users = new(){
+                new User(){Id = 0, }
+            };
+ 
+            User newUser = new()
+            {
+                FirstName = "Luis",
+                LastName = "Garcia"
+            };
+            string json = System.Text.Json.JsonSerializer.Serialize(newUser);
+            StringContent content = new(json);
             //Act
-            HttpResponseMessage response =  await client.GetAsync("/Users/");
+            HttpResponseMessage response =  await client.PostAsync("/Users/Create", content);
             //Assert
             response.EnsureSuccessStatusCode();
             Assert.AreEqual(1,usersClient.PostAsyncInvocationCount);
+            Assert.AreEqual(1, usersClient.PostAsyncInvokedParameters.Count);
+            Assert.AreEqual(newUser.FirstName, usersClient.PostAsyncInvokedParameters[0].FirstName);
+            Assert.AreEqual(newUser.LastName, usersClient.PostAsyncInvokedParameters[0].LastName);
         }
     
     }

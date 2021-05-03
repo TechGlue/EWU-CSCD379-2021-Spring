@@ -22,7 +22,7 @@ namespace SecretSanta.Web
         };
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IUsersClient, UsersClient>(_=> new UsersClient(ApiClient));
+            services.AddScoped<IUsersClient, UsersClient>(_ => new UsersClient(ApiClient));
             services.AddControllersWithViews();
         }
 

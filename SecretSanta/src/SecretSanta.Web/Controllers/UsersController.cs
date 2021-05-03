@@ -39,11 +39,14 @@ namespace SecretSanta.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(UserViewModel viewModel)
+        public async Task<IActionResult> Create(UserViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                MockData.Users.Add(viewModel);
+                await Client.PostAsync(new User {
+                    FirstName = viewModel.FirstName,
+                    LastName = viewModel.LastName
+                });
                 return RedirectToAction(nameof(Index));
             }
 

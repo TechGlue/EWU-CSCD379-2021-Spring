@@ -16,7 +16,7 @@ namespace SecretSanta.Web.Tests.Api{
             throw new System.NotImplementedException();
         }
 
-        public List<User>? GetAllUsersReturnValue{get; set;}
+        public List<User> GetAllUsersReturnValue{get; set;} = new();
         public int GetAllAsyncInvocationCount{get; set;}
         public Task<ICollection<User>?> GetAllAsync()
         {
@@ -32,7 +32,6 @@ namespace SecretSanta.Web.Tests.Api{
         {
             throw new System.NotImplementedException();
         }
-
         public Task<User> GetAsync(int id, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
@@ -47,7 +46,7 @@ namespace SecretSanta.Web.Tests.Api{
             return Task.FromResult(myUser);
         }
 
-        public Task<object> PostAsync(User user, CancellationToken cancellationToken)
+        public Task<User> PostAsync(User user, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }

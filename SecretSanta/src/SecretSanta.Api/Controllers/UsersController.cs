@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Net;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SecretSanta.Api.Dto;
 using SecretSanta.Business;
 using SecretSanta.Data;
-using SecretSanta.Api.Dto;
 
 namespace SecretSanta.Api.Controllers
 {
@@ -16,7 +16,7 @@ namespace SecretSanta.Api.Controllers
 
         public UsersController(IUserRepository repository)
         {
-            Repository = repository ?? throw new System.ArgumentNullException(nameof(repository));
+            Repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         [HttpGet]
@@ -29,7 +29,11 @@ namespace SecretSanta.Api.Controllers
         public ActionResult<User?> Get(int id)
         {
             User? user = Repository.GetItem(id);
-            if (user is null) return NotFound();
+            if (id < 0)
+            {
+                return NotFound();
+            }
+            User? returnedUser = Repository.GetItem(id);
             return user;
         }
 
@@ -46,7 +50,7 @@ namespace SecretSanta.Api.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         public ActionResult<User?> Post([FromBody] User? user)
         {
