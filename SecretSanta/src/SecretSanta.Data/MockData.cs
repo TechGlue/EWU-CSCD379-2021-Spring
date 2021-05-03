@@ -20,7 +20,7 @@ namespace SecretSanta.Data
                 new User
                 {
                     Id = 2,
-                    FirstName = "Princess",
+                    FirstName = "rincess",
                     LastName = "Buttercup"
                 }
             },
