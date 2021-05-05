@@ -16,47 +16,47 @@ namespace SecretSanta.Web.Tests.Api{
             throw new System.NotImplementedException();
         }
 
-        public List<User> GetAllUsersReturnValue{get; set;} = new();
+        public List<UserDto> GetAllUsersReturnValue{get; set;} = new();
         public int GetAllAsyncInvocationCount{get; set;}
-        public Task<ICollection<User>?> GetAllAsync()
+        public Task<ICollection<UserDto>?> GetAllAsync()
         {
             GetAllAsyncInvocationCount++;
-            return Task.FromResult<ICollection<User>?>(GetAllUsersReturnValue);
+            return Task.FromResult<ICollection<UserDto>?>(GetAllUsersReturnValue);
         }
-        public Task<ICollection<User>> GetAllAsync(CancellationToken cancellationToken)
+        public Task<ICollection<UserDto>> GetAllAsync(CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<User> GetAsync(int id)
+        public Task<UserDto> GetAsync(int id)
         {
             throw new System.NotImplementedException();
         }
-        public Task<User> GetAsync(int id, CancellationToken cancellationToken)
+        public Task<UserDto> GetAsync(int id, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
         
         public int PostAsyncInvocationCount {get; set;}
-        public List<User> PostAsyncInvokedParameters{get;} = new();
-        public Task<User> PostAsync(User myUser)
+        public List<UserDto> PostAsyncInvokedParameters{get;} = new();
+        public Task<UserDto> PostAsync(UserDto myUser)
         {
             PostAsyncInvocationCount++;
             PostAsyncInvokedParameters.Add(myUser);
             return Task.FromResult(myUser);
         }
 
-        public Task<User> PostAsync(User user, CancellationToken cancellationToken)
+        public Task<UserDto> PostAsync(UserDto user, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<FileResponse> PutAsync(int id, UpdateUser user)
+        public Task<UserDto> PutAsync(int id, UserDto user)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<FileResponse> PutAsync(int id, UpdateUser user, CancellationToken cancellationToken)
+        public Task<UserDto> PutAsync(int id, UserDto user, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }

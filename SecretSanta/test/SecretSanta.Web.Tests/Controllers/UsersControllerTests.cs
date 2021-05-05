@@ -7,7 +7,7 @@ using SecretSanta.Web.Api;
 using SecretSanta.Web.Tests.Api;
 using SecretSanta.Web.ViewModels;
 
-namespace SecretSanta.Web.Tests
+namespace SecretSanta.Web.Tests.controllers
 {
     [TestClass]
     public class UsersControllersTests
@@ -20,22 +20,22 @@ namespace SecretSanta.Web.Tests
         public async Task Index_WithUsers_InvocesGetAllAsync()
         {
             //arrange
-            User user1 = new(){
+            UserDto user1 = new(){
                 Id = 1,
                 FirstName = "luis",
                 LastName = "garcia"
             };
 
-            User user2 = new(){
+            UserDto user2 = new(){
                 Id = 2,
                 FirstName = "luis2",
                 LastName = "garcia2"
             };
             TestableUsersClient usersClient = Factory.Client;
-            usersClient.GetAllUsersReturnValue = new List<User>(){
+            usersClient.GetAllUsersReturnValue = new List<UserDto>(){
                 user1, user2
             };
-            HttpClient  client = Factory.CreateClient();
+            HttpClient client = Factory.CreateClient();
             //act
             HttpResponseMessage response =  await client.GetAsync("/Users/");
             //assert
@@ -51,18 +51,18 @@ namespace SecretSanta.Web.Tests
             TestableUsersClient usersClient = Factory.Client;
             HttpClient client = Factory.CreateClient();
 
-            List<User> u = new(){
-                new User(){Id = 0,FirstName = "Luis", LastName = "Garcia" }
+            List<UserDto> u = new(){
+                new UserDto(){Id = 0,FirstName = "Luis", LastName = "Garcia" }
             };
  
-            User newUser = new()
+            UserDto newUser = new()
             {
                 FirstName = "Luis",
                 LastName = "Garcia"
             };
 
             string json = System.Text.Json.JsonSerializer.Serialize(newUser);
-            StringContent content = new(json);
+            StringContent content = new (json);
             //Act
             HttpResponseMessage response =  await client.PostAsync("/Users/Create", content);
             //Assert

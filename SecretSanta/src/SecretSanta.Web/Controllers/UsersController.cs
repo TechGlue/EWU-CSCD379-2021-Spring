@@ -5,6 +5,7 @@ using SecretSanta.Web.Api;
 using SecretSanta.Web.Data;
 using SecretSanta.Web.ViewModels;
 using System;
+using System.Linq;
 
 namespace SecretSanta.Web.Controllers
 {
@@ -19,13 +20,14 @@ namespace SecretSanta.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ICollection<User> users = await Client.GetAllAsync();
+            ICollection<UserDto> users = await Client.GetAllAsync();
             List<UserViewModel> viewModelUsers = new();
-            foreach(User e in users)
+            int count = users.Select(item => item.Id).Max() ?? 0;
+            foreach(UserDto e in users)
             {
                 viewModelUsers.Add(new UserViewModel
                 {
-                    Id = e.Id,
+                    Id = e.Id ?? count,
                     FirstName = e.FirstName,
                     LastName = e.LastName
                 });
@@ -43,7 +45,8 @@ namespace SecretSanta.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                await Client.PostAsync(new User {
+                await Client.PostAsync(new UserDto() {
+                    Id = viewModel.Id,
                     FirstName = viewModel.FirstName,
                     LastName = viewModel.LastName
                 });
@@ -59,11 +62,13 @@ namespace SecretSanta.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(UserViewModel viewModel)
+        public async Task<IActionResult> Edit(UserViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                MockData.Users[viewModel.Id] = viewModel;
+                await Client.PutAsync(viewModel.Id,
+                    new UserDto {Id = viewModel.Id, FirstName = viewModel.FirstName, LastName = viewModel.LastName});
+             
                 return RedirectToAction(nameof(Index));
             }
 
