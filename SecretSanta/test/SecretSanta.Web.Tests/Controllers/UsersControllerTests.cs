@@ -15,7 +15,7 @@ namespace SecretSanta.Web.Tests.controllers
 
     {       
         private WebApplicationFactory Factory{get;} = new();
-        private TestableUsersClient Client {get;} = new();
+    
 
         [TestMethod]
         public async Task Index_WithUsers_InvocesGetAllAsync()
@@ -44,7 +44,7 @@ namespace SecretSanta.Web.Tests.controllers
             Assert.AreEqual(1,usersClient.GetAllAsyncInvocationCount);
         }
 
-        //currently failing retry 
+        
         [TestMethod]
         public async Task Create_WithValidModel_InvokePostAsync()
         {
@@ -62,10 +62,49 @@ namespace SecretSanta.Web.Tests.controllers
             HttpResponseMessage response =  await client.PostAsync("/Users/Create", content);
             //Assert
             response.EnsureSuccessStatusCode();
+            
             Assert.AreEqual(1,usersClient.PostAsyncInvocationCount);
             Assert.AreEqual(1, usersClient.PostAsyncInvokedParameters.Count);
             Assert.AreEqual("Luis", usersClient.PostAsyncInvokedParameters[0].FirstName);
             Assert.AreEqual("Garcia", usersClient.PostAsyncInvokedParameters[0].LastName);
+        }
+        
+                
+        [TestMethod]
+        public async Task Edit_WithValidId_InvokePutAsync()
+        {
+            //Arrange
+            TestableUsersClient usersClient = Factory.Client;
+            HttpClient client = Factory.CreateClient();
+
+            Dictionary<string, string?> dictionary = new(){
+                {nameof(UserDto.FirstName),"Luis"},
+                {nameof(UserDto.LastName),"Garcia"}
+            };
+
+            FormUrlEncodedContent content = new(dictionary!);
+            //Act
+            HttpResponseMessage response =  await client.PostAsync("/Users/Edit/0", content);
+            //Assert
+            response.EnsureSuccessStatusCode();
+            //was not able to finish on time.
+        }
+
+        [TestMethod]
+        public async Task delete_WithValidID_InvokePutAsync()
+        {
+            //Arrange
+            TestableUsersClient usersClient = Factory.Client;
+            HttpClient client = Factory.CreateClient();
+
+            List<UserDto> users = new()
+            {
+                new UserDto() {Id = 0, FirstName = "Luis", LastName = "Garcia"},
+                new UserDto() {Id = 2, FirstName = "Bill", LastName = "Tree"}
+            };
+
+            //needs love :(
+
         }
     
     }
