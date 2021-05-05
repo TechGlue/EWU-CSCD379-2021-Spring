@@ -15,7 +15,6 @@ namespace SecretSanta.Web.Tests.Api{
         {
             throw new System.NotImplementedException();
         }
-
         public List<UserDto> GetAllUsersReturnValue{get; set;} = new();
         public int GetAllAsyncInvocationCount{get; set;}
         public Task<ICollection<UserDto>?> GetAllAsync()
