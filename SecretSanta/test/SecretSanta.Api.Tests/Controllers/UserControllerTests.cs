@@ -86,6 +86,60 @@ namespace SecretSanta.Api.Tests.Controllers
                 //Assert
                 Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
             }
+
+            [TestMethod]
+            public async Task Delete_WithValidID_DeletesUser()
+            {
+                //Arrange
+                WebApplicationFactory factory = new();
+                TestableUserManager manager = factory.Manager;
+                UsersController controller = new(manager);
+                HttpClient client = factory.CreateClient();
+                manager.UserList = new(){
+                    new User()
+                    {
+                        Id = 0,
+                        FirstName = "joe",
+                        LastName = "blow"
+                    },
+                    new User()
+                    {
+                        Id = 1,
+                        FirstName = "Bill",
+                        LastName = "Burr"
+                    }
+                };
+                
+                //Act
+                HttpResponseMessage response = await client.DeleteAsync("/api/Users/0");
+              
+                //Assert
+                Assert.AreEqual(1,manager.UserList[0].Id);
+                Assert.AreEqual("Bill",manager.UserList[0].FirstName);
+                Assert.AreEqual("Burr", manager.UserList[0].LastName);
+            }
+            
+            //was not able to finish the post method in time :(
+            [TestMethod]
+            public async Task Post_WithValidData_CreatesUser()
+            {
+                //Arrange
+                WebApplicationFactory factory = new();
+                TestableUserManager manager = factory.Manager;
+                UsersController controller = new(manager);
+                
+                manager.UserList = new();
+
+                UserDto user = new() {Id = 42, FirstName = "Like", LastName = "Mike"};
+                HttpClient client = factory.CreateClient();
+
+                //Act
+                HttpResponseMessage response = await client.PostAsJsonAsync("/api/Users", user );
+                response.EnsureSuccessStatusCode();
+                //Assert
+                Assert.AreEqual("Like", manager.UserList[0].FirstName);
+            }
+
    
            [TestMethod]         
            public async Task Put_WithValidData_UpdatesUser()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -51,26 +52,20 @@ namespace SecretSanta.Web.Tests.controllers
             TestableUsersClient usersClient = Factory.Client;
             HttpClient client = Factory.CreateClient();
 
-            List<UserDto> u = new(){
-                new UserDto(){Id = 0,FirstName = "Luis", LastName = "Garcia" }
-            };
- 
-            UserDto newUser = new()
-            {
-                FirstName = "Luis",
-                LastName = "Garcia"
+            Dictionary<string, string?> dictionary = new(){
+                {nameof(UserDto.FirstName),"Luis"},
+                {nameof(UserDto.LastName),"Garcia"}
             };
 
-            string json = System.Text.Json.JsonSerializer.Serialize(newUser);
-            StringContent content = new (json);
+            FormUrlEncodedContent content = new(dictionary!);
             //Act
             HttpResponseMessage response =  await client.PostAsync("/Users/Create", content);
             //Assert
             response.EnsureSuccessStatusCode();
             Assert.AreEqual(1,usersClient.PostAsyncInvocationCount);
             Assert.AreEqual(1, usersClient.PostAsyncInvokedParameters.Count);
-            Assert.AreEqual(newUser.FirstName, usersClient.PostAsyncInvokedParameters[0].FirstName);
-            Assert.AreEqual(newUser.LastName, usersClient.PostAsyncInvokedParameters[0].LastName);
+            Assert.AreEqual("Luis", usersClient.PostAsyncInvokedParameters[0].FirstName);
+            Assert.AreEqual("Garcia", usersClient.PostAsyncInvokedParameters[0].LastName);
         }
     
     }

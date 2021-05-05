@@ -19,12 +19,23 @@ namespace SecretSanta.Api.Tests.Business
                 return GetItemUser;
             }
 
-            public ICollection<User> List(){
-                throw new System.NotImplementedException();
+            public List<User> UserList { get; set;}
+            public ICollection<User> List()
+            {
+                return UserList;
             }
 
-            public bool Remove(int id){
-                throw new System.NotImplementedException();
+            public bool Remove(int id)
+            {
+                User? user = UserList.Find( x => x.Id == id);
+
+                if (user != null)
+                {
+                    UserList.Remove(user);
+                    return true;
+                }
+
+                return false;
             }
 
             public User? SavedUser{get; set;}
