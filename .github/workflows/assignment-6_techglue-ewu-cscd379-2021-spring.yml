@@ -5,29 +5,41 @@ name: Azure App Service - TechGlue-EWU-CSCD379-2021-Spring(Production), Build an
 
 on:
   push:
-    branches:
-      - Assignment-6
+    branches: [ Assignment-* ]
+  pull_request:
+    branches: [ Assignment-* ]
 
 jobs:
-  build-and-deploy:
+  build:
+    defaults:
+      run:
+        working-directory: ./SecretSanta/
     runs-on: ubuntu-latest
 
     steps:
     # checkout the repo
-    - name: 'Checkout Github Action'
-      uses: actions/checkout@master
-
-
-    - name: Set up .NET Core
+    - uses: actions/checkout@v2
+    - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '5.0.x'
-
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
+        dotnet-version: 5.0.x
+      
+    - name: npm install
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: install
+      
+    - name: npm build
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: npm run build:prod
+      
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
@@ -35,5 +47,5 @@ jobs:
         app-name: TechGlue-EWU-CSCD379-2021-Spring
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C041DA63ACC3477381F0839F2D327EBF }}
-        package: ${{env.DOTNET_ROOT}}/myapp
+        package: ${{env.DOTNET_ROOT}}/binSecretSanta
 
