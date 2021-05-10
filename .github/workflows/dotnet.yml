@@ -31,10 +31,8 @@ jobs:
     - name: npm build
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: npm run build:prod
-
     - name: List Files in Share Views directory
-     working-directory: ./SecretSanta/src/SecretSanta.Web/
-     run: ls ./Views/Shared
-
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: ls ./Views/Shared
     - name: Test
       run: dotnet test --no-build --verbosity normal
