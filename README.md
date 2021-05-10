@@ -1,6 +1,8 @@
 ﻿
 # Assignment 6
 
+![](../../workflows/.NET/badge.svg)
+
 ## Overview
 
 In this project, we are going to configure continuous integration and continuous deployment.
