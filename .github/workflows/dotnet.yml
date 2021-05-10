@@ -21,9 +21,17 @@ jobs:
         dotnet-version: 5.0.x
     - name: Get Directory
       run: pwd
+      
+    - name: npm install
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: install
+      
+    - name: npm build
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: npm run build:prod
+      
     - name: Restore dependencies
       run: dotnet restore
-    
     - name: Build
       run: dotnet build --no-restore
     - name: List Files in Share Views directory
