@@ -26,7 +26,7 @@ jobs:
       
     - name: npm install
       working-directory: ./SecretSanta/src/SecretSanta.Web/
-      run: install
+      run: npm install
       
     - name: npm build
       working-directory: ./SecretSanta/src/SecretSanta.Web/
