@@ -2,9 +2,9 @@ name: Assignment Build And Test
 
 on:
   push:
-    branches: [ Assignment* ]
+    branches: [ Assignment-* ]
   pull_request:
-    branches: [ Assignment* ]
+    branches: [ Assignment-* ]
 
 jobs:
   build:
