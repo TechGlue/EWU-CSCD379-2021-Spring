@@ -2,6 +2,8 @@
 # Assignment 6
 
 ![](../../workflows/.NET/badge.svg)
+
+## Deployed Website
 **https://techglue-ewu-cscd379-2021-spring.azurewebsites.net/**
 
 ## Overview
