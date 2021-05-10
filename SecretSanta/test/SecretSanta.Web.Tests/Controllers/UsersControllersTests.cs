@@ -19,7 +19,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual("userClient", ex.ParamName);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Index_WithUsers_RetrievesUsers()
         {
             using WebApplicationFactory factory = new();
@@ -40,7 +40,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual(1, usersClient.GetAllInvocationCount);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Create_WithValidModel_CreatesUser()
         {
             using WebApplicationFactory factory = new();
@@ -66,7 +66,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual(1, usersClient.PostInvocationCount);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Create_WithInvalidModel_CreatesUser()
         {
             using WebApplicationFactory factory = new();
@@ -87,7 +87,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual(0, usersClient.PostInvocationCount);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Edit_WithUserId_RetrievesUser()
         {
             using WebApplicationFactory factory = new();
@@ -106,7 +106,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual(1, usersClient.GetInvocationCount);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Edit_WithValidModel_UpdatesUser()
         {
             using WebApplicationFactory factory = new();
@@ -136,7 +136,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual(1, usersClient.PutInvocationCount);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Edit_WithInvalidModel_DoesNotUpdateUser()
         {
             using WebApplicationFactory factory = new();
@@ -161,7 +161,7 @@ namespace SecretSanta.Web.Tests.Controllers
             Assert.AreEqual(0, usersClient.PutInvocationCount);
         }
 
-        [TestMethod][Ignore("Tests not running in github actions")]
+        [TestMethod]
         public async Task Delete_WithUserId_RemovesUsers()
         {
             using WebApplicationFactory factory = new();
