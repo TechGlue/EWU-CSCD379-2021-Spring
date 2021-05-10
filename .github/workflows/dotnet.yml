@@ -32,7 +32,7 @@ jobs:
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: npm run build:prod
 
-    -name: List Files in Share Views directory
+    - name: List Files in Share Views directory
      working-directory: ./SecretSanta/src/SecretSanta.Web/
      run: ls ./Views/Shared
 
