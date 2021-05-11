@@ -9,4 +9,6 @@
 
 [![Azure App Service - EWU-CSCD379-2021-Spring-Ashrom0(Production), Build and deploy DotnetCore app](https://github.com/Ashrom0/EWU-CSCD379-2021-Spring/actions/workflows/assignment6_ewu-cscd379-2021-spring-ashrom0.yml/badge.svg)](https://github.com/Ashrom0/EWU-CSCD379-2021-Spring/actions/workflows/assignment6_ewu-cscd379-2021-spring-ashrom0.yml)
 
+[![Azure App Service - API-EWU-CSCD379-2021-Spring-Ashrom(Production), Build and deploy DotnetCore app](https://github.com/Ashrom0/EWU-CSCD379-2021-Spring/actions/workflows/assignment6_api-ewu-cscd379-2021-spring-ashrom.yml/badge.svg?branch=Assignment6)](https://github.com/Ashrom0/EWU-CSCD379-2021-Spring/actions/workflows/assignment6_api-ewu-cscd379-2021-spring-ashrom.yml)
+
 Fork Branch : https://github.com/Ashrom0/EWU-CSCD379-2021-Spring/tree/Assignment6
