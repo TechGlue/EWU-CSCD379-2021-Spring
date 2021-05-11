@@ -19,6 +19,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
+
+    ###Web###
     - name: Get Directory
       run: pwd
       
@@ -29,22 +31,29 @@ jobs:
     - name: npm build
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: npm run build:prod
-      
-    - name: Restore dependencies
+
+    - name: Restore dependencies Web
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: dotnet restore
 
-    - name: Build
+    - name: Restore dependencies Web Test
+      working-directory: ./SecretSanta/test/SecretSanta.Web.Tests/
+      run: dotnet restore
+
+    - name: Build Web
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: dotnet build --no-restore
 
-    - name: Test
-      working-directory: ./SecretSanta/src/SecretSanta.Web/
+    - name: Build Web Tests
+      working-directory: ./SecretSanta/test/SecretSanta.Web.Tests/
+      run: dotnet build --no-restore 
+
+    - name: Test Web
+      working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
       run: dotnet test --no-build --verbosity normal
 
-    ###API##
- 
-      
+    ###API###
+
     - name: Restore dependencies Api
       working-directory: ./SecretSanta/src/SecretSanta.Api/
       run: dotnet restore
