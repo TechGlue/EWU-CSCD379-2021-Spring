@@ -1,7 +1,8 @@
 ﻿
 # Assignment 6
 
-![](../../workflows/.NET/badge.svg)
+![](../../workflows/.NET/badge.svg)<br /> 
+![](https://github.com/TechGlue/EWU-CSCD379-2021-Spring/actions/workflows/assignment-6_techglue-ewu-cscd379-2021-spring.yml/badge.svg)
 
 ## Deployed Website
 **https://techglue-ewu-cscd379-2021-spring.azurewebsites.net/**
