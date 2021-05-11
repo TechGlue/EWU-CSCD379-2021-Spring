@@ -41,7 +41,7 @@ jobs:
       run: dotnet build --no-restore --configuration Release
     ###Api###  
     - name: Restore dependencies API
-      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      working-directory: ./SecretSanta/src/SecretSanta.Api/
       run: dotnet restore
 
     - name: Build API 
