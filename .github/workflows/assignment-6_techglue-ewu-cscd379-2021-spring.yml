@@ -56,6 +56,7 @@ jobs:
       working-directory: ./SecretSanta/src/SecretSanta.Api/
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSantaApi
 
+    ###Running API and Web###
     - name: Run Azure API App 
       uses: azure/webapps-deploy@v2
       with:
