@@ -38,21 +38,12 @@ jobs:
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: dotnet build --no-restore
 
-    ###API##
     - name: Test
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: dotnet test --no-build --verbosity normal
-      
-    - name: Restore dependencies Api
-      working-directory: ./SecretSanta/src/SecretSanta.Api/
-      run: dotnet restore
 
-    - name: Build Api
-      working-directory: ./SecretSanta/src/SecretSanta.Api/
-      run: dotnet build --no-restore
+    ###API##
+ 
 
-    - name: Test Api
-      working-directory: ./SecretSanta/src/SecretSanta.Api/
-      run: dotnet test --no-build --verbosity normal
 
 
