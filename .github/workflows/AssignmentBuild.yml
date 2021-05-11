@@ -19,22 +19,59 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
+
+    ###Web###
     - name: Get Directory
       run: pwd
-
-    - name: Run Npm Build
-      working-directory: ./SecretSanta/src/SecretSanta.Web/
-      run: |
-        npm install
-        npm run build:prod
-
-    - name: Restore dependencies
-      run: dotnet restore
       
-    - name: Build
+    - name: npm install
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: npm install
+      
+    - name: npm build
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: npm run build:prod
+
+    - name: Restore dependencies Web
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: dotnet restore
+
+    - name: Restore dependencies Web Test
+      working-directory: ./SecretSanta/test/SecretSanta.Web.Tests/
+      run: dotnet restore
+
+    - name: Build Web
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: dotnet build --no-restore
 
-    - name: Test
+    - name: Build Web Tests
+      working-directory: ./SecretSanta/test/SecretSanta.Web.Tests/
+      run: dotnet build --no-restore 
+
+    - name: Test Web
+      working-directory: ./SecretSanta/test/SecretSanta.Web.Tests/
+      run: dotnet test --no-build --verbosity normal
+
+    ###API###
+
+    - name: Restore dependencies API
+      working-directory: ./SecretSanta/src/SecretSanta.Api/
+      run: dotnet restore
+
+    - name: Restore dependencies API Test
+      working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
+      run: dotnet restore
+
+    - name: Build API Tests
+      working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
+      run: dotnet build --no-restore 
+
+    - name: Build API
+      working-directory: ./SecretSanta/src/SecretSanta.Api/
+      run: dotnet build --no-restore
+
+    - name: Test API
+      working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
       run: dotnet test --no-build --verbosity normal
       
     - name: Verify Build Badge
