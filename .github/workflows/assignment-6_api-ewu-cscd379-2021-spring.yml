@@ -5,29 +5,34 @@ name: Azure App Service - API-EWU-CSCD379-2021-Spring(Production), Build and dep
 
 on:
   push:
-    branches:
-      - Assignment-6
+    branches: [ Assignment-* ]
+  pull_request:
+    branches: [ Assignment-* ]
+    
 
 jobs:
-  build-and-deploy:
+  build:
+    defaults:
+      run:
+        working-directory: ./SecretSanta/
     runs-on: ubuntu-latest
-
+    
     steps:
     # checkout the repo
-    - name: 'Checkout Github Action'
-      uses: actions/checkout@master
-
-
-    - name: Set up .NET Core
+    - uses: actions/checkout@v2
+    - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '5.0.x'
-
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
-
+        dotnet-version: 5.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+    
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      working-directory: ./SecretSanta/src/SecretSanta.Web/
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
