@@ -32,7 +32,7 @@ jobs:
     
     - name: dotnet run
       working-directory: ./SecretSanta/src/SecretSanta.Api/
-      run: dotnet run -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
+      run: dotnet publish ./SecretSanta/src/SecretSanta.Api/SecretSanta.Api.csproj -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
