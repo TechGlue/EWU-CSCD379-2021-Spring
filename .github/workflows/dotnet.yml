@@ -54,23 +54,23 @@ jobs:
 
     ###API###
 
-    - name: Restore dependencies Api
+    - name: Restore dependencies API
       working-directory: ./SecretSanta/src/SecretSanta.Api/
       run: dotnet restore
 
-    - name: Restore dependencies Api Test
+    - name: Restore dependencies API Test
       working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
       run: dotnet restore
 
-    - name: Build Api Tests
+    - name: Build API Tests
       working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
       run: dotnet build --no-restore 
 
-    - name: Build Api
+    - name: Build API
       working-directory: ./SecretSanta/src/SecretSanta.Api/
       run: dotnet build --no-restore
 
-    - name: Test Api
+    - name: Test API
       working-directory: ./SecretSanta/test/SecretSanta.Api.Tests/
       run: dotnet test --no-build --verbosity normal
 
