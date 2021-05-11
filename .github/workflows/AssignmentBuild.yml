@@ -36,7 +36,7 @@ jobs:
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
-
+      
     - name: Verify Build Badge
       working-directory: ./
       shell: pwsh
