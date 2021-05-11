@@ -7,6 +7,9 @@
 ## Deployed Website
 **https://techglue-ewu-cscd379-2021-spring.azurewebsites.net/**
 
+## Actions 
+**https://github.com/TechGlue/EWU-CSCD379-2021-Spring/actions**
+
 ## Overview
 
 In this project, we are going to configure continuous integration and continuous deployment.
