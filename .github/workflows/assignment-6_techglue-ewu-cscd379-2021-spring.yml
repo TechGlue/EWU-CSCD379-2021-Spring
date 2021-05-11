@@ -23,10 +23,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-        
-    - name: setting api
-      working-directory: ./SecretSanta/src/SecretSanta.Api
-      run: dotnet build
       
     - name: npm install
       working-directory: ./SecretSanta/src/SecretSanta.Web/
@@ -43,10 +39,6 @@ jobs:
 
     - name: dotnet publish
       working-directory: ./SecretSanta/src/SecretSanta.Web/
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
-      
-    - name: dotnet publish api
-      working-directory: ./SecretSanta/src/SecretSanta.Api/
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
 
     - name: Run Azure webapp deploy action using publish profile credentials
