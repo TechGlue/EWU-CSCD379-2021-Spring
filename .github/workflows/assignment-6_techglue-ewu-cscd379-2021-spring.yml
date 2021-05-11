@@ -54,7 +54,7 @@ jobs:
 
     - name: dotnet publish API
       working-directory: ./SecretSanta/src/SecretSanta.Api/
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSanta
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/binSecretSantaApi
 
     - name: Run Azure API App 
       uses: azure/webapps-deploy@v2
@@ -62,7 +62,7 @@ jobs:
         app-name: API-EWU-CSCD379-2021-Spring
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_241327426D6F4F279D4FC01DCAB4A092 }}
-        package: ${{env.DOTNET_ROOT}}/myapp
+        package: ${{env.DOTNET_ROOT}}/binSecretSantaApi
 
     - name: Run Azure webapp
       uses: azure/webapps-deploy@v2
