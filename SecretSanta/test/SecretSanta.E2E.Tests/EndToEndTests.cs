@@ -132,9 +132,39 @@ namespace SecretSanta.Web.Test
             
             //make sure we have 6 after adding.
             Users = await page.QuerySelectorAllAsync("body > section > section > section");
+
+            await page.FillAsync("#FirstName", "suil");
             await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyAddUser.png");
             Assert.AreEqual(initialNumberUsers+1, Users.Count());
         }
+        
+        [TestMethod]
+        public async Task ModifyLastUser()
+        {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
+            using var playwright = await Playwright.CreateAsync();
+            await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
+            {
+                Headless = true,
+            });
+
+            var page = await browser.NewPageAsync();
+            var response = await page.GoToAsync(localhost);
+
+            Assert.IsTrue(response.Ok);
+            
+            await page.ClickAsync("text=Users");
+           
+            await page.ClickAsync("body > section > section > section:last-child > a > section");
+            Assert.IsTrue(response.Ok);
+            
+            // //make sure we have 4 users after the delete.
+            // Users = await page.QuerySelectorAllAsync("body > section > section > section");
+            // Assert.AreEqual(4, Users.Count());
+            
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyEditLastUser.png"); 
+        }
+
         
         [TestMethod]
         public async Task DeleteUser()
