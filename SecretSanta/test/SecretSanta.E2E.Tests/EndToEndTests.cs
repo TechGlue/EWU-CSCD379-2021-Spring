@@ -72,6 +72,7 @@ namespace SecretSanta.Web.Test
         [TestMethod]
         public async Task DeleteUser()
         {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
             {
@@ -79,7 +80,7 @@ namespace SecretSanta.Web.Test
             });
 
             var page = await browser.NewPageAsync();
-            var response = await page.GoToAsync("https://localhost:5001");
+            var response = await page.GoToAsync(localhost);
 
             Assert.IsTrue(response.Ok);
             
@@ -102,6 +103,7 @@ namespace SecretSanta.Web.Test
         [TestMethod]
         public async Task ValidateUserText()
         {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
             {
@@ -109,7 +111,7 @@ namespace SecretSanta.Web.Test
             });
 
             var page = await browser.NewPageAsync();
-            var response = await page.GoToAsync("https://localhost:5001");
+            var response = await page.GoToAsync(localhost);
 
             Assert.IsTrue(response.Ok);
             
@@ -117,7 +119,8 @@ namespace SecretSanta.Web.Test
            
             var sectionText = await page.GetTextContentAsync("body > section > section > section:last-child > a > section > div");
             
-            Assert.IsTrue(sectionText.Contains("samuel p"));
+            Assert.IsTrue(sectionText.Contains("Count Rugen"));
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/Users.png");
         }
      }
 }
