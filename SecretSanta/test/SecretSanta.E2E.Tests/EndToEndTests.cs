@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PlaywrightSharp;
 using System.Linq;
+using SecretSanta.Data;
 using SecretSanta.Web.Tests;
 
 namespace SecretSanta.Web.Test
@@ -183,17 +184,18 @@ namespace SecretSanta.Web.Test
             
             await page.ClickAsync("text=Users");
             
-            //make sure we have 5 speakers here
+            
             var Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            Assert.AreEqual(5, Users.Count());
+            int count = Users.Count();
+            Assert.AreEqual(count, Users.Count());
             
             page.Dialog += (_, args) => args.Dialog.AcceptAsync();
            
             await page.ClickAsync("body > section > section > section:last-child > a > section > form > button");
             
-            //make sure we have 4 users after the delete.
             Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            Assert.AreEqual(4, Users.Count());
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyUsersDelete.png");
+            Assert.AreEqual(count-1, Users.Count());
         }
         
         
