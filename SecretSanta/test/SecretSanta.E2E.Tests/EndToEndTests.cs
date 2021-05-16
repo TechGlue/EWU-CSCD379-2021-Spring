@@ -102,36 +102,39 @@ namespace SecretSanta.Web.Test
             Assert.IsTrue(response.Ok);
         }
 
-        // [TestMethod]
-        // public async Task CreateUser()
-        // {
-        //     using var playwright = await Playwright.CreateAsync();
-        //     await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
-        //     {
-        //         Headless = true,
-        //     });
-        //
-        //     var page = await browser.NewPageAsync();
-        //     var response = await page.GoToAsync("https://localhost:5001");
-        //
-        //     Assert.IsTrue(response.Ok);
-        //     
-        //     await page.ClickAsync("text=Users");
-        //     
-        //     //make sure we have 5 speakers here
-        //     var Users = await page.QuerySelectorAllAsync("body > section > section > section");
-        //     Assert.AreEqual(5, Users.Count());
-        //     
-        //     await page.ClickAsync("text=Create");
-        //     await page.TypeAsync("input#FirstName", "Luis");
-        //     await page.TypeAsync("input#LastName", "Garcia");
-        //     
-        //     await page.ClickAsync("text=Create");
-        //     
-        //     //make sure we have 6 after adding.
-        //     Users = await page.QuerySelectorAllAsync("body > section > section > section");
-        //     Assert.AreEqual(6, Users.Count());
-        // }
+        [TestMethod]
+        public async Task CreateUser()
+        {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
+            using var playwright = await Playwright.CreateAsync();
+            await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
+            {
+                Headless = true,
+            });
+        
+            var page = await browser.NewPageAsync();
+            var response = await page.GoToAsync(localhost);
+        
+            Assert.IsTrue(response.Ok);
+            
+            await page.ClickAsync("text=Users");
+            
+            //make sure we have 5 speakers here
+            var Users = await page.QuerySelectorAllAsync("body > section > section > section");
+            int initialNumberUsers = Users.Count();
+            Assert.AreEqual(initialNumberUsers, Users.Count());
+            
+            await page.ClickAsync("text=Create");
+            await page.TypeAsync("input#FirstName", "Luis");
+            await page.TypeAsync("input#LastName", "Garcia");
+            
+            await page.ClickAsync("text=Create");
+            
+            //make sure we have 6 after adding.
+            Users = await page.QuerySelectorAllAsync("body > section > section > section");
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyAddUser.png");
+            Assert.AreEqual(initialNumberUsers+1, Users.Count());
+        }
         
         [TestMethod]
         public async Task DeleteUser()
