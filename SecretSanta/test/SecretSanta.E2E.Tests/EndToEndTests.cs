@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PlaywrightSharp;
 using System.Linq;
-using SecretSanta.Data;
 using SecretSanta.Web.Tests;
 
 namespace SecretSanta.Web.Test
@@ -18,7 +17,6 @@ namespace SecretSanta.Web.Test
         {
             Server = new();
         }
-
         
         [TestMethod]
         public async Task LaunchHomePage()
@@ -27,7 +25,7 @@ namespace SecretSanta.Web.Test
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
             {
-                Headless = false, SlowMo = 250,
+                Headless = true
             });
 
             var page = await browser.NewPageAsync();
@@ -47,7 +45,7 @@ namespace SecretSanta.Web.Test
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
             {
-                Headless = false, SlowMo = 250,
+                Headless = true
             });
 
             var page = await browser.NewPageAsync();
@@ -57,7 +55,6 @@ namespace SecretSanta.Web.Test
 
             await page.ClickAsync("text=Users");
            
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyUsers.png");
             Assert.IsTrue(response.Ok);
         }
         
@@ -68,7 +65,7 @@ namespace SecretSanta.Web.Test
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
             {
-                Headless = false, SlowMo = 250,
+                Headless = true
             });
 
             var page = await browser.NewPageAsync();
@@ -78,7 +75,6 @@ namespace SecretSanta.Web.Test
 
             await page.ClickAsync("text=Gifts");
            
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyGifts.png");
             Assert.IsTrue(response.Ok);
         }
        
@@ -89,7 +85,7 @@ namespace SecretSanta.Web.Test
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
             {
-                Headless = false, SlowMo = 250,
+                Headless = true
             });
 
             var page = await browser.NewPageAsync();
@@ -99,7 +95,6 @@ namespace SecretSanta.Web.Test
 
             await page.ClickAsync("text=Groups");
            
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyGroups.png");
             Assert.IsTrue(response.Ok);
         }
 
@@ -134,8 +129,6 @@ namespace SecretSanta.Web.Test
             //make sure we have 6 after adding.
             Users = await page.QuerySelectorAllAsync("body > section > section > section");
 
-            await page.FillAsync("#FirstName", "suil");
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyAddUser.png");
             Assert.AreEqual(initialNumberUsers+1, Users.Count());
         }
         
@@ -159,13 +152,13 @@ namespace SecretSanta.Web.Test
             await page.ClickAsync("body > section > section > section:last-child > a > section");
             Assert.IsTrue(response.Ok);
             
-            // //make sure we have 4 users after the delete.
-            // Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            // Assert.AreEqual(4, Users.Count());
+            await page.FillAsync("text=First Name", "Garcia");
+            await page.FillAsync("text=Last Name", "Luis");
+            await page.ClickAsync("text=Update");
             
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyEditLastUser.png"); 
+            var sectionText = await page.GetTextContentAsync("body > section > section > section:last-child > a > section > div");
+            Assert.IsTrue(sectionText.Contains("Garcia Luis"));
         }
-
         
         [TestMethod]
         public async Task DeleteUser()
@@ -194,7 +187,6 @@ namespace SecretSanta.Web.Test
             await page.ClickAsync("body > section > section > section:last-child > a > section > form > button");
             
             Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyUsersDelete.png");
             Assert.AreEqual(count-1, Users.Count());
         }
         
@@ -218,8 +210,7 @@ namespace SecretSanta.Web.Test
            
             var sectionText = await page.GetTextContentAsync("body > section > section > section:last-child > a > section > div");
             
-            Assert.IsTrue(sectionText.Contains("Count Rugen"));
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/Users.png");
+            Assert.IsTrue(sectionText.Contains("Miracle Max"));
         }
      }
 }
