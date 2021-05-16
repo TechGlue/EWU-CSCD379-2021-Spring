@@ -38,6 +38,70 @@ namespace SecretSanta.Web.Test
             Assert.AreEqual("Secret Santa", headerContent);
         }
         
+              
+        [TestMethod]
+        public async Task VerifyUsers()
+        {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
+            using var playwright = await Playwright.CreateAsync();
+            await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
+            {
+                Headless = false, SlowMo = 250,
+            });
+
+            var page = await browser.NewPageAsync();
+            var response = await page.GoToAsync(localhost);
+
+            Assert.IsTrue(response.Ok);
+
+            await page.ClickAsync("text=Users");
+           
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyUsers.png");
+            Assert.IsTrue(response.Ok);
+        }
+        
+        [TestMethod]
+        public async Task VerifyGifts()
+        {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
+            using var playwright = await Playwright.CreateAsync();
+            await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
+            {
+                Headless = false, SlowMo = 250,
+            });
+
+            var page = await browser.NewPageAsync();
+            var response = await page.GoToAsync(localhost);
+
+            Assert.IsTrue(response.Ok);
+
+            await page.ClickAsync("text=Gifts");
+           
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyGifts.png");
+            Assert.IsTrue(response.Ok);
+        }
+       
+        [TestMethod]
+        public async Task VerifyGroups()
+        {
+            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
+            using var playwright = await Playwright.CreateAsync();
+            await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
+            {
+                Headless = false, SlowMo = 250,
+            });
+
+            var page = await browser.NewPageAsync();
+            var response = await page.GoToAsync(localhost);
+
+            Assert.IsTrue(response.Ok);
+
+            await page.ClickAsync("text=Groups");
+           
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyGroups.png");
+            Assert.IsTrue(response.Ok);
+        }
+
         // [TestMethod]
         // public async Task CreateUser()
         // {
