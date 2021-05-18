@@ -39,6 +39,7 @@ export function createOrUpdateUser(){
         async create(){
             try {
                 const response = await axios.get(`${apiHost}/api/users`)
+                //grabbing the max id if we don't do this we will always be replacing user 0
                 var maxId:number = 0;
                 
                 for(var k = 0; k<response.data.length; k++)
