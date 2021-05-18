@@ -95,7 +95,7 @@ namespace SecretSanta.Web.Test
         }
 
         [TestMethod]
-        public async Task CreateUser()
+        public async Task CreateGift()
         {
             var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
             using var playwright = await Playwright.CreateAsync();
@@ -109,28 +109,30 @@ namespace SecretSanta.Web.Test
         
             Assert.IsTrue(response.Ok);
             
-            await page.ClickAsync("text=Users");
+            await page.ClickAsync("text=Gifts");
             
-            //make sure we have 5 speakers here
             await page.WaitForSelectorAsync("body > section > section > section");
-            var Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            int initialNumberUsers = Users.Count();
-            Assert.AreEqual(initialNumberUsers, Users.Count());
-            
-            await page.ClickAsync("text=Create");
-            await page.TypeAsync("input#FirstName", "Luis");
-            await page.TypeAsync("input#LastName", "Garcia");
+            var Gifts = await page.QuerySelectorAllAsync("body > section > section > section");
+            int initialNumberGifts = Gifts.Count();
+            Assert.AreEqual(initialNumberGifts, Gifts.Count());
             
             await page.ClickAsync("text=Create");
             
-            //make sure we have 6 after adding.
-            await page.WaitForSelectorAsync("body > section > section > section");
-            Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            Assert.AreEqual(initialNumberUsers+1, Users.Count());
+            await page.TypeAsync("input#Title", "19 Dollar fortnite card");
+            await page.TypeAsync("input#Description", "19 dollar fortnite card");
+            await page.TypeAsync("input#Url", "fortnite.com");
+            await page.TypeAsync("input#Priority", "1");
+            await page.SelectOptionAsync("select#UserId", "1");
+            
+            await page.ClickAsync("text=Create");
+
+            Gifts = await page.QuerySelectorAllAsync("body > section > section > section");
+            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyCreateGift.png"); 
+            Assert.AreEqual(initialNumberGifts+1, Gifts.Count());
         }
         
         [TestMethod]
-        public async Task ModifyLastUser()
+        public async Task ModifyLastGift()
         {
             var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
             using var playwright = await Playwright.CreateAsync();
@@ -144,21 +146,25 @@ namespace SecretSanta.Web.Test
 
             Assert.IsTrue(response.Ok);
             
-            await page.ClickAsync("text=Users");
+            await page.ClickAsync("text=Gifts");
            
             await page.ClickAsync("body > section > section > section:last-child > a > section");
             Assert.IsTrue(response.Ok);
             
-            await page.FillAsync("text=First Name", "Garcia");
-            await page.FillAsync("text=Last Name", "Luis");
+          
+            await page.FillAsync("text=Title", "Bag of Rocks");
+            await page.FillAsync("text=Description", "Just a simple bag of rocks");
+            await page.FillAsync("text=Url", "Rocks.org");
+            await page.FillAsync("text=Priority", "5");
+            await page.SelectOptionAsync("select#UserId", "1");
+
             await page.ClickAsync("text=Update");
-            
             var sectionText = await page.GetTextContentAsync("body > section > section > section:last-child > a > section > div");
-            Assert.IsTrue(sectionText.Contains("Garcia Luis"));
+            Assert.IsTrue(sectionText.Contains("Bag of Rocks"));
         }
         
         [TestMethod]
-        public async Task DeleteUser()
+        public async Task DeleteGift()
         {
             var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
             using var playwright = await Playwright.CreateAsync();
@@ -172,43 +178,18 @@ namespace SecretSanta.Web.Test
 
             Assert.IsTrue(response.Ok);
             
-            await page.ClickAsync("text=Users");
-            
-            
-            var Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            int count = Users.Count();
-            Assert.AreEqual(count, Users.Count());
+            await page.ClickAsync("text=Gifts");
+
+            var Gifts = await page.QuerySelectorAllAsync("body > section > section > section");
+            int count = Gifts.Count();
+            Assert.AreEqual(count, Gifts.Count());
             
             page.Dialog += (_, args) => args.Dialog.AcceptAsync();
            
             await page.ClickAsync("body > section > section > section:last-child > a > section > form > button");
-            
-            Users = await page.QuerySelectorAllAsync("body > section > section > section");
-            Assert.AreEqual(count-1, Users.Count());
+            Gifts = await page.QuerySelectorAllAsync("body > section > section > section");
+            Assert.AreEqual(count-1, Gifts.Count());
         }
-        
-        
-        [TestMethod]
-        public async Task ValidateUserText()
-        {
-            var localhost = Server.WebRootUri.AbsoluteUri.Replace("127.0.0.1", "localhost");
-            using var playwright = await Playwright.CreateAsync();
-            await using var browser = await playwright.Chromium.LaunchAsync(new LaunchOptions
-            {
-                Headless = true,
-            });
-
-            var page = await browser.NewPageAsync();
-            var response = await page.GoToAsync(localhost);
-
-            Assert.IsTrue(response.Ok);
-            
-            await page.ClickAsync("text=Users");
-           
-            var sectionText = await page.GetTextContentAsync("body > section > section > section:last-child > a > section > div");
-            
-            Assert.IsTrue(sectionText.Contains("Miracle Max"));
-        }
-     }
+    }
 }
  
