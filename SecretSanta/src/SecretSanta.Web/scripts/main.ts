@@ -10,6 +10,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, far, fab);
 dom.watch();
 
+declare var apiHost: string;
+
 interface User{
     id:number,
     firstName: string,
@@ -31,6 +33,51 @@ export function setupNav() {
     }
 }
 
+export function createOrUpdateUser(){
+    return{
+        user: {} as User,
+        async create(){
+            try {
+                const response = await axios.get(`${apiHost}/api/users`)
+                var maxId:number = 0;
+                
+                for(var k = 0; k<response.data.length; k++)
+                {
+                    if(response.data[k].id > maxId){
+                        maxId = response.data[k].id;
+                    }
+                }
+                
+                this.user.id = maxId +1;
+                
+                await axios.post(`${apiHost}/api/users`, this.user);
+                window.location.href = "/Users";
+            }catch (error){
+                console.log(error);
+            }
+        },
+        async update(){
+          try{
+              await axios.put(`${apiHost}/api/users/${this.user.id}`, this.user);
+              window.location.href = "/users";
+          }catch(error){
+              console.log(error);
+          }  
+        },
+        
+        async loadData(){
+            const pathnameSplit = window.location.pathname.split('/');
+            const id = pathnameSplit[pathnameSplit.length-1];
+            try{
+                const response = await axios.get(`${apiHost}/api/users/${id}`)
+                this.user = response.data;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
+}
+
 export function setupUsers() {
     return {
         users: [] as User[],
@@ -39,13 +86,13 @@ export function setupUsers() {
         },
         async deleteUser(currentUser: User) {
             if (confirm(`Are you sure you want to delete ${currentUser.firstName} ${currentUser.lastName}?`)) {
-                await axios.delete(`https://localhost:5101/api/users/${currentUser.id}`);
+                await axios.delete(`${apiHost}/api/users/${currentUser.id}`);  
                 await this.loadUsers();
             }
         },
         async loadUsers() {
             try {
-                const response = await axios.get("https://localhost:5101/api/users");
+                const response = await axios.get(`${apiHost}/api/users`);
                 this.users = response.data;
             } catch (error) {
                 console.log(error);

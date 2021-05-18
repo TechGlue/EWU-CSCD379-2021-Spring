@@ -36,7 +36,6 @@ namespace SecretSanta.Web.Test
             Assert.AreEqual("Secret Santa", headerContent);
         }
         
-              
         [TestMethod]
         public async Task VerifyUsers()
         {
@@ -53,7 +52,6 @@ namespace SecretSanta.Web.Test
             Assert.IsTrue(response.Ok);
 
             await page.ClickAsync("text=Users");
-           
             Assert.IsTrue(response.Ok);
         }
         
@@ -93,7 +91,6 @@ namespace SecretSanta.Web.Test
             Assert.IsTrue(response.Ok);
 
             await page.ClickAsync("text=Groups");
-           
             Assert.IsTrue(response.Ok);
         }
 
@@ -115,6 +112,7 @@ namespace SecretSanta.Web.Test
             await page.ClickAsync("text=Users");
             
             //make sure we have 5 speakers here
+            await page.WaitForSelectorAsync("body > section > section > section");
             var Users = await page.QuerySelectorAllAsync("body > section > section > section");
             int initialNumberUsers = Users.Count();
             Assert.AreEqual(initialNumberUsers, Users.Count());
@@ -126,8 +124,8 @@ namespace SecretSanta.Web.Test
             await page.ClickAsync("text=Create");
             
             //make sure we have 6 after adding.
+            await page.WaitForSelectorAsync("body > section > section > section");
             Users = await page.QuerySelectorAllAsync("body > section > section > section");
-
             Assert.AreEqual(initialNumberUsers+1, Users.Count());
         }
         
