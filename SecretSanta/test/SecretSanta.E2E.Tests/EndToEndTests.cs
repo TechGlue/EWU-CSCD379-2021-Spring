@@ -4,7 +4,7 @@ using PlaywrightSharp;
 using System.Linq;
 using SecretSanta.Web.Tests;
 
-namespace SecretSanta.Web.Test
+namespace SecretSanta.E2E.Tests
 {
     [TestClass]
     public class EndToEndTests
@@ -29,9 +29,8 @@ namespace SecretSanta.Web.Test
 
             var page = await browser.NewPageAsync();
             var response = await page.GoToAsync(localhost);
-
             Assert.IsTrue(response.Ok);
-            //the variable under here is searching the html form for these divs and then looking for the contents. 
+
             var headerContent = await page.GetTextContentAsync("body > header > div > a");
             Assert.AreEqual("Secret Santa", headerContent);
         }
@@ -48,7 +47,6 @@ namespace SecretSanta.Web.Test
 
             var page = await browser.NewPageAsync();
             var response = await page.GoToAsync(localhost);
-
             Assert.IsTrue(response.Ok);
 
             await page.ClickAsync("text=Users");
@@ -67,11 +65,9 @@ namespace SecretSanta.Web.Test
 
             var page = await browser.NewPageAsync();
             var response = await page.GoToAsync(localhost);
-
             Assert.IsTrue(response.Ok);
 
             await page.ClickAsync("text=Gifts");
-           
             Assert.IsTrue(response.Ok);
         }
        
@@ -127,7 +123,6 @@ namespace SecretSanta.Web.Test
             await page.ClickAsync("text=Create");
 
             Gifts = await page.QuerySelectorAllAsync("body > section > section > section");
-            await page.ScreenshotAsync("/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/test/SecretSanta.E2E.Tests/TestScreenshots/VerifyCreateGift.png"); 
             Assert.AreEqual(initialNumberGifts+1, Gifts.Count());
         }
         

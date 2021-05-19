@@ -42,7 +42,7 @@ export function createOrUpdateUser(){
                 //grabbing the max id if we don't do this we will always be replacing user 0
                 var maxId:number = 0;
                 
-                for(var k = 0; k<response.data.length; k++)
+                for(var k = 1; k < response.data.length; k++)
                 {
                     if(response.data[k].id > maxId){
                         maxId = response.data[k].id;
