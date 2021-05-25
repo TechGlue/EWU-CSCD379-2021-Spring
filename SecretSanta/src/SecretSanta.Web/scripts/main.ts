@@ -117,6 +117,7 @@ export function createOrUpdateGroup() {
     return {
         group: {} as Group,
         allUsers: [] as User[],
+        receivers:[] as string[],
         selectedUserId: 0,
         isEditing: false,
         generationError: "",
@@ -189,6 +190,37 @@ export function createOrUpdateGroup() {
                 console.log(error);
             }
             await this.loadGroup();
+        },
+        async generateAssignments(currentGroupId:number)
+        {
+            try{
+                var client = new GroupsClient(apiHost);
+                await client.generateAssignments(currentGroupId);
+                this.generationError="";
+            }catch(error){
+                console.log(error);
+                this.generationError = error;
+            }
+            await this.loadGroup();
+        },
+        getAssignment(user:User) :string
+        {
+            var receiver: string = "Not assigned";
+            
+            try{
+                this.group.assignments.forEach(i =>{
+                    if(i.giver?.id == user.id && i.giver.firstName == user.firstName && i.giver.lastName == user.lastName){
+                        receiver = `${i.receiver?.firstName} ${i.receiver?.lastName}`
+                    }
+                });
+            }catch (error)
+            {
+                console.log(error);
+                this.generationError = error;
+                receiver = error;
+            }
+            
+            return receiver;
         }
     }
 }
