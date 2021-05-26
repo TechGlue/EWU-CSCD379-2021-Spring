@@ -18,8 +18,7 @@ namespace SecretSanta.Data
                 group.Users.Add(user);
             }
         }
-
-
+        
         public static Dictionary<int, User> Users { get; } = new()
         {
             {

@@ -119,7 +119,7 @@ namespace SecretSanta.Business.Tests
 
             AssignmentResult result = sut.GenerateAssignments(42);
 
-            Assert.AreEqual("Group not found", result.ErrorMessage);
+            Assert.AreEqual("Sorry, there must be a minimum of three members in a group.", result.ErrorMessage);
         }
 
         [TestMethod]
@@ -134,9 +134,10 @@ namespace SecretSanta.Business.Tests
 
             AssignmentResult result = sut.GenerateAssignments(42);
 
-            Assert.AreEqual($"Group Group must have at least three users", result.ErrorMessage);
+            Assert.AreEqual("Sorry, there must be a minimum of three members in a group.", result.ErrorMessage);
         }
 
+        //user is not allowed to be both the Giver and Recipient of the assignment.
         [TestMethod]
         public void GenerateAssignments_WithValidGroup_CreatesAssignments()
         {

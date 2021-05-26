@@ -255,8 +255,8 @@ namespace SecretSanta.Api.Tests.Controllers
             repository.AssignmentResult = AssignmentResult.Error("Some error");
             Data.Group group = new()
             {
-                Id = 42,
-                Name = "Group",
+                Id = 24,
+                Name = "Some Group",
             };
             repository.Create(group);
             HttpClient client = factory.CreateClient();

@@ -117,7 +117,6 @@ export function createOrUpdateGroup() {
     return {
         group: {} as Group,
         allUsers: [] as User[],
-        receivers:[] as string[],
         selectedUserId: 0,
         isEditing: false,
         generationError: "",

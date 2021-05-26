@@ -50,6 +50,7 @@ namespace SecretSanta.Business
 
         public AssignmentResult GenerateAssignments(int id)
         {
+            //grab and do some checks
             Group group = GetItem(id);
 
             if (group is null)
@@ -58,25 +59,20 @@ namespace SecretSanta.Business
             }
             if (group.Users.Count < 3)
             {
-                return AssignmentResult.Error("Sorry, there are not enough members in the group.");
+                return AssignmentResult.Error("Sorry, there must be a minimum of three members in a group.");
             }
             //begin randomizing.
             group.Assignments.Clear();
 
             List<User> randomizedReceiverList = group.Users;
-            Console.WriteLine("The following number of users are in the count:" + randomizedReceiverList.Count);
-            
             Shuffle(randomizedReceiverList);
-
-            //Distributing users technique with randomized list from my review partner pedro.
+            
             for (int i = 0; i < group.Users.Count; i++)
             {
                 MockData.Groups[id].Assignments.Add(i < randomizedReceiverList.Count - 1
                     ? new Assignment(randomizedReceiverList[i], randomizedReceiverList[i + 1])
                     : new Assignment(randomizedReceiverList[i], randomizedReceiverList[0]));
             }
-            Console.WriteLine(group.Assignments[0].Receiver.FirstName);
-            Console.WriteLine("The number of assignments: " + group.Assignments.Count);
             return AssignmentResult.Success();
         }
 
