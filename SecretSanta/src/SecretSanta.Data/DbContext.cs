@@ -58,7 +58,7 @@ namespace SecretSanta.Data
             modelBuilder.Entity<Group>()
                 .HasAlternateKey(group => new {group.Name});
             modelBuilder.Entity<Assignment>()
-                .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
+                .HasAlternateKey(assignment => new {assignment.Giver, assignment.Receiver});
         }
     }
 }
