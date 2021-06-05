@@ -9,7 +9,7 @@ using SecretSanta.Data;
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    [Migration("20210604062026_InitialCreate")]
+    [Migration("20210605235046_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,7 +35,7 @@ namespace SecretSanta.Data.Migrations
 
             modelBuilder.Entity("SecretSanta.Data.Assignment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("AssignmentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -43,36 +43,25 @@ namespace SecretSanta.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("GiverId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int?>("GroupId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ReceiverId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
+                    b.HasKey("AssignmentID");
 
                     b.HasAlternateKey("GiverAndReceiver");
 
-                    b.HasIndex("GiverId");
-
                     b.HasIndex("GroupId");
-
-                    b.HasIndex("ReceiverId");
 
                     b.ToTable("Assignment");
                 });
 
             modelBuilder.Entity("SecretSanta.Data.Gift", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("GiftId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Priority")
@@ -83,13 +72,12 @@ namespace SecretSanta.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("URL")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("GiftId");
 
                     b.HasAlternateKey("Title", "UserId");
 
@@ -151,21 +139,9 @@ namespace SecretSanta.Data.Migrations
 
             modelBuilder.Entity("SecretSanta.Data.Assignment", b =>
                 {
-                    b.HasOne("SecretSanta.Data.User", "Giver")
-                        .WithMany()
-                        .HasForeignKey("GiverId");
-
                     b.HasOne("SecretSanta.Data.Group", null)
                         .WithMany("Assignments")
                         .HasForeignKey("GroupId");
-
-                    b.HasOne("SecretSanta.Data.User", "Receiver")
-                        .WithMany()
-                        .HasForeignKey("ReceiverId");
-
-                    b.Navigation("Giver");
-
-                    b.Navigation("Receiver");
                 });
 
             modelBuilder.Entity("SecretSanta.Data.Group", b =>

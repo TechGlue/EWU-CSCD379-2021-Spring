@@ -10,17 +10,17 @@ namespace SecretSanta.Data.Migrations
                 name: "Gifts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    GiftId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
-                    Description = table.Column<string>(type: "TEXT", nullable: false),
-                    URL = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    URL = table.Column<string>(type: "TEXT", nullable: true),
                     Priority = table.Column<int>(type: "INTEGER", nullable: false),
                     UserId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Gifts", x => x.Id);
+                    table.PrimaryKey("PK_Gifts", x => x.GiftId);
                     table.UniqueConstraint("AK_Gifts_Title_UserId", x => new { x.Title, x.UserId });
                 });
 
@@ -57,33 +57,19 @@ namespace SecretSanta.Data.Migrations
                 name: "Assignment",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    AssignmentID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    GiverId = table.Column<int>(type: "INTEGER", nullable: true),
-                    ReceiverId = table.Column<int>(type: "INTEGER", nullable: true),
                     GiverAndReceiver = table.Column<string>(type: "TEXT", nullable: false),
                     GroupId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Assignment", x => x.Id);
+                    table.PrimaryKey("PK_Assignment", x => x.AssignmentID);
                     table.UniqueConstraint("AK_Assignment_GiverAndReceiver", x => x.GiverAndReceiver);
                     table.ForeignKey(
                         name: "FK_Assignment_Groups_GroupId",
                         column: x => x.GroupId,
                         principalTable: "Groups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Assignment_Users_GiverId",
-                        column: x => x.GiverId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Assignment_Users_ReceiverId",
-                        column: x => x.ReceiverId,
-                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -113,19 +99,9 @@ namespace SecretSanta.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Assignment_GiverId",
-                table: "Assignment",
-                column: "GiverId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Assignment_GroupId",
                 table: "Assignment",
                 column: "GroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Assignment_ReceiverId",
-                table: "Assignment",
-                column: "ReceiverId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_GroupUser_UsersId",

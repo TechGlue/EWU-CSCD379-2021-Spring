@@ -52,13 +52,13 @@ namespace SecretSanta.Data
             }
 
             modelBuilder.Entity<User>()
-                .HasAlternateKey(user => new { user.FirstName, user.LastName });
+                .HasAlternateKey(user => new { user.FirstName, user.LastName});
             modelBuilder.Entity<Gift>()
                 .HasAlternateKey(gift => new {gift.Title, gift.UserId});
             modelBuilder.Entity<Group>()
                 .HasAlternateKey(group => new {group.Name});
             modelBuilder.Entity<Assignment>()
-                .HasAlternateKey(assignment => new {assignment.Giver, assignment.Receiver});
+                .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
         }
     }
 }
