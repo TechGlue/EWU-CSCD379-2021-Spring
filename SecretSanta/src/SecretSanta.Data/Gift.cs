@@ -10,6 +10,6 @@ namespace SecretSanta.Data
         public String Description { get; set;}
         public String URL { get; set;}
         public int Priority { get; set;}
-        public List<Gift> Gifts { get; set; }
+        public int UserId { get; set;}
     }
 }
