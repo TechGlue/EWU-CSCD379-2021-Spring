@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SecretSanta.Data;
 
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    partial class DbContextModelSnapshot : ModelSnapshot
+    [Migration("20210607015709_User,Group,Changes")]
+    partial class UserGroupChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -79,7 +81,7 @@ namespace SecretSanta.Data.Migrations
 
                     b.HasAlternateKey("Title", "UserId");
 
-                    b.ToTable("Gift");
+                    b.ToTable("Gifts");
                 });
 
             modelBuilder.Entity("SecretSanta.Data.Group", b =>
@@ -96,7 +98,7 @@ namespace SecretSanta.Data.Migrations
 
                     b.HasAlternateKey("Name");
 
-                    b.ToTable("Group");
+                    b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("SecretSanta.Data.User", b =>
@@ -117,15 +119,7 @@ namespace SecretSanta.Data.Migrations
 
                     b.HasAlternateKey("FirstName", "LastName");
 
-                    b.ToTable("User");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            FirstName = "Luis",
-                            LastName = "Garcia"
-                        });
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("GroupUser", b =>

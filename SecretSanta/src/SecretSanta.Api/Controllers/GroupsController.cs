@@ -80,7 +80,7 @@ namespace SecretSanta.Api.Controllers
             Data.Group? foundGroup = GroupRepository.GetItem(id);
             if (foundGroup is not null)
             {
-                if (foundGroup.Users.FirstOrDefault(x => x.Id == userId) is { } user)
+                if (foundGroup.Users.FirstOrDefault(x => x.UserId == userId) is { } user)
                 {
                     foundGroup.Users.Remove(user);
                     GroupRepository.Save(foundGroup);
@@ -100,7 +100,7 @@ namespace SecretSanta.Api.Controllers
             Data.User? foundUser = UserRepository.GetItem(userId);
             if (foundGroup is not null && foundUser is not null)
             {
-                if (!foundGroup.Users.Any(x => x.Id == foundUser.Id))
+                if (!foundGroup.Users.Any(x => x.UserId == foundUser.UserId))
                 {
                     foundGroup.Users.Add(foundUser);
                     GroupRepository.Save(foundGroup);

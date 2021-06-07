@@ -37,7 +37,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group"
             };
             repository.Create(group);
@@ -61,7 +61,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group",
             };
             repository.Create(group);
@@ -84,7 +84,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group"
             };
             repository.Create(group);
@@ -106,7 +106,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group"
             };
             repository.Create(group);
@@ -129,7 +129,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group"
             };
             repository.Create(group);
@@ -163,7 +163,7 @@ namespace SecretSanta.Api.Tests.Controllers
             //Assert
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             var createdGroup = repository.GetItem(42);
-            Assert.AreEqual(42, createdGroup?.Id);
+            Assert.AreEqual(42, createdGroup?.GroupId);
             Assert.AreEqual("Group", createdGroup!.Name);
         }
 
@@ -175,7 +175,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group"
             };
             repository.Create(group);
@@ -190,7 +190,7 @@ namespace SecretSanta.Api.Tests.Controllers
             //Assert
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             var createdGroup = repository.GetItem(42);
-            Assert.AreEqual(42, createdGroup?.Id);
+            Assert.AreEqual(42, createdGroup?.GroupId);
             Assert.AreEqual("Changed", createdGroup!.Name);
         }
 
@@ -202,7 +202,7 @@ namespace SecretSanta.Api.Tests.Controllers
             TestableGroupRepository repository = factory.GroupRepository;
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group"
             };
             repository.Create(group);
@@ -217,7 +217,7 @@ namespace SecretSanta.Api.Tests.Controllers
             //Assert
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
             var createdGroup = repository.GetItem(42);
-            Assert.AreEqual(42, createdGroup?.Id);
+            Assert.AreEqual(42, createdGroup?.GroupId);
             Assert.AreEqual("Group", createdGroup!.Name);
         }
 
@@ -230,7 +230,7 @@ namespace SecretSanta.Api.Tests.Controllers
             repository.AssignmentResult = AssignmentResult.Success();
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group",
             };
             repository.Create(group);
@@ -255,7 +255,7 @@ namespace SecretSanta.Api.Tests.Controllers
             repository.AssignmentResult = AssignmentResult.Error("Some error");
             Data.Group group = new()
             {
-                Id = 42,
+                GroupId = 42,
                 Name = "Group",
             };
             repository.Create(group);

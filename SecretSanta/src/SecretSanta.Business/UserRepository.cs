@@ -12,7 +12,7 @@ namespace SecretSanta.Business
                 throw new System.ArgumentNullException(nameof(item));
             }
 
-            MockData.Users[item.Id] = item;
+            MockData.Users[item.UserId] = item;
             return item;
         }
 
@@ -42,7 +42,7 @@ namespace SecretSanta.Business
                 throw new System.ArgumentNullException(nameof(item));
             }
 
-            MockData.Users[item.Id] = item;
+            MockData.Users[item.UserId] = item;
         }
     }
 }

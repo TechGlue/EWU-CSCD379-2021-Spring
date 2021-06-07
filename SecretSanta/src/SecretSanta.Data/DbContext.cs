@@ -5,15 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using DbContext = SecretSanta.Data.DbContext;
 
 namespace SecretSanta.Data
 {
     public class DbContext : Microsoft.EntityFrameworkCore.DbContext
     {
+        private bool created = false;
         public DbContext()
             : base(new DbContextOptionsBuilder<DbContext>().UseSqlite("Data Source=main.db").Options)
-        { }
+        {
+            if (!created)
+            {
+                created = true;
+                Database.EnsureDeleted();
+                Database.EnsureCreated();
+            }
+        }
 
         public DbSet<Group> Groups => Set<Group>();
         public DbSet<User> Users => Set<User>();
@@ -25,6 +32,9 @@ namespace SecretSanta.Data
             {
                 throw new ArgumentNullException(nameof(modelBuilder));
             }
+            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<Group>().ToTable("Group");
+            modelBuilder.Entity<Gift>().ToTable("Gift");
 
             modelBuilder.Entity<User>()
                 .HasAlternateKey(user => new { user.FirstName, user.LastName});
@@ -32,8 +42,11 @@ namespace SecretSanta.Data
                 .HasAlternateKey(gift => new {gift.Title, gift.UserId});
             modelBuilder.Entity<Group>()
                 .HasAlternateKey(group => new {group.Name});
-            modelBuilder.Entity<Assignment>()
+             modelBuilder.Entity<Assignment>()
                 .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
+
+            modelBuilder.Entity<User>().HasData(DbInitializer.Users());
+            modelBuilder.Entity<Group>().HasData(DbInitializer.Groups());
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SecretSanta.Business
                 throw new ArgumentNullException(nameof(item));
             }
 
-            MockData.Groups[item.Id] = item;
+            MockData.Groups[item.GroupId] = item;
             return item;
         }
 
@@ -43,7 +43,7 @@ namespace SecretSanta.Business
                 throw new ArgumentNullException(nameof(item));
             }
 
-            MockData.Groups[item.Id] = item;
+            MockData.Groups[item.GroupId] = item;
         }
 
         public AssignmentResult GenerateAssignments(int groupId)

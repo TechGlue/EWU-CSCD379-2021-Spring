@@ -12,7 +12,7 @@
             return new User
             {
                 FirstName = user.FirstName,
-                Id = user.Id,
+                Id = user.UserId,
                 LastName = user.LastName
             };
         }
@@ -22,7 +22,7 @@
             if (user is null) return null;
             return new Data.User
             {
-                Id = user.Id,
+                UserId = user.Id,
                 FirstName = user.FirstName ?? "",
                 LastName = user.LastName ?? ""
             };

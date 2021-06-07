@@ -9,14 +9,26 @@ namespace SecretSanta.Data.Tests
         [TestMethod]
         public void GroupDb_AddingGroup_Success()
         {
-            using DbContext db = new DbContext();
-            Group group = new Group() {Id = 41, Name = "Pedro's pizza"};
+            using var db = new DbContext();
+            Group group = new Group() {GroupId = 412, Name = "Pedro's Diner"};
 
             int count = db.Groups.Count();
-            Group groupAdded = db.Groups.Add(group).Entity;
+            db.Groups.Add(group);
             db.SaveChanges();
             
             Assert.AreEqual(count+1, db.Groups.Count());
+        }
+
+        [TestMethod]
+        public void UserDB_AddingUser_Success()
+        {
+            using var db = new DbContext();
+            int count = db.Users.Count();
+
+            db.Users.Add(new User() {UserId = 7, FirstName = "ght", LastName = "yagami"});
+            db.SaveChanges();
+              
+            Assert.AreEqual(count+1, db.Users.Count());
         }
     }
 }

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SecretSanta.Data;
 
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    partial class DbContextModelSnapshot : ModelSnapshot
+    [Migration("20210607021401_definedtables")]
+    partial class definedtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,15 +40,12 @@ namespace SecretSanta.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("GiverAndReceiver")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("GroupId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("AssignmentID");
-
-                    b.HasAlternateKey("GiverAndReceiver");
 
                     b.HasIndex("GroupId");
 
@@ -118,14 +117,6 @@ namespace SecretSanta.Data.Migrations
                     b.HasAlternateKey("FirstName", "LastName");
 
                     b.ToTable("User");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            FirstName = "Luis",
-                            LastName = "Garcia"
-                        });
                 });
 
             modelBuilder.Entity("GroupUser", b =>
