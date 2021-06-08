@@ -12,27 +12,37 @@ namespace SecretSanta.Business
                 throw new System.ArgumentNullException(nameof(item));
             }
 
-            MockData.Users[item.UserId] = item;
+            using DbContext dbContext = new DbContext();
+            dbContext.Users.Add(item);
+            dbContext.SaveChangesAsync();
             return item;
         }
 
         public User? GetItem(int id)
         {
-            if (MockData.Users.TryGetValue(id, out User? user))
-            {
-                return user;
-            }
-            return null;
+            using DbContext dbContext = new DbContext();
+            User user = dbContext.Users.Find(id);
+            return user;
         }
 
         public ICollection<User> List()
         {
-            return MockData.Users.Values;
+            using DbContext dbContext = new DbContext();
+            List<User> userList = new List<User>();
+            foreach (var user in dbContext.Users)
+            {
+                userList.Add(user);
+            }
+            return userList;
         }
 
         public bool Remove(int id)
         {
-            return MockData.Users.Remove(id);
+            using DbContext dbContext = new DbContext();
+            User item = dbContext.Users.Find(id);
+            dbContext.Users.Remove(item);
+            dbContext.SaveChangesAsync();
+            return true;
         }
 
         public void Save(User item)
@@ -42,7 +52,17 @@ namespace SecretSanta.Business
                 throw new System.ArgumentNullException(nameof(item));
             }
 
-            MockData.Users[item.UserId] = item;
+            User temp = dbContext.Users.Find(item.Id);
+            if (temp is null)
+            {
+                Create(item);
+            }
+            else
+            {
+                dbContext.Users.Remove(dbContext.Users.Find(item.Id));
+                dbContext.Users.Add(item);
+            }
+            dbContext.SaveChangesAsync();
         }
     }
 }

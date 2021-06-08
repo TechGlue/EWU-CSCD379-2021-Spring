@@ -1,0 +1,1504 @@
+dbug: 6/7/2021 22:24:03.102 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupsGroupId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:24:03.102 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'UsersUserId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:24:03.102 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupId.Assignment' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 6/7/2021 22:24:03.215 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+dbug: 6/7/2021 22:24:03.405 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:24:03.424 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'User' tracked by 'DbContext' changed state from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:24:03.436 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:24:03.441 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:24:03.474 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:24:03.474 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:24:03.494 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:24:03.494 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:24:03.494 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:24:03.494 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:24:03.494 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:24:03.604 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DbContext' disposed.
+dbug: 6/7/2021 22:24:28.292 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupsGroupId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:24:28.292 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'UsersUserId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:24:28.292 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupId.Assignment' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 6/7/2021 22:24:28.396 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+dbug: 6/7/2021 22:24:28.481 RelationalEventId.MigrateUsingConnection[20400] (Microsoft.EntityFrameworkCore.Migrations) 
+      Migrating using database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.488 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.498 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.516 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 6/7/2021 22:24:28.522 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (6ms).
+dbug: 6/7/2021 22:24:28.522 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.522 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.528 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: 6/7/2021 22:24:28.541 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+dbug: 6/7/2021 22:24:28.543 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.544 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (0ms).
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.545 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: 6/7/2021 22:24:28.546 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+dbug: 6/7/2021 22:24:28.546 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.546 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.555 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 6/7/2021 22:24:28.555 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 6/7/2021 22:24:28.555 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.555 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.555 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: 6/7/2021 22:24:28.557 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+dbug: 6/7/2021 22:24:28.560 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 6/7/2021 22:24:28.560 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.560 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+info: 6/7/2021 22:24:28.588 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations) 
+      Applying migration '20210606014831_InitialCreate'.
+dbug: 6/7/2021 22:24:28.668 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.668 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.670 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:24:28.673 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:24:28.674 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:24:28.674 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:24:28.674 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gifts" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gifts" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gifts_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:24:28.675 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gifts" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gifts" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gifts_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Groups" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Groups" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Groups_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:24:28.675 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Groups" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Groups" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Groups_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Users" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_Users_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:24:28.675 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Users" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_Users_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:24:28.675 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Groups_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Groups" ("Id") ON DELETE RESTRICT
+      );
+fail: 6/7/2021 22:24:28.680 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Groups_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Groups" ("Id") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:24:28.682 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:24:28.682 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:24:28.682 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:24:28.684 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DbContext' disposed.
+dbug: 6/7/2021 22:38:18.251 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupsGroupId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:38:18.251 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'UsersUserId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:38:18.251 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupId.Assignment' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 6/7/2021 22:38:18.373 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+dbug: 6/7/2021 22:38:18.445 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.455 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.459 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.459 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.460 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.461 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.464 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.467 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.467 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.468 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.473 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.477 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (4ms).
+dbug: 6/7/2021 22:38:18.481 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: 6/7/2021 22:38:18.492 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+dbug: 6/7/2021 22:38:18.492 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.493 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.589 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:38:18.606 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:18.612 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:18.679 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.679 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.681 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:38:18.683 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:38:18.684 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.684 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.684 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+info: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+info: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+info: 6/7/2021 22:38:18.685 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.685 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.686 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+info: 6/7/2021 22:38:18.686 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+dbug: 6/7/2021 22:38:18.686 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:18.686 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:18.686 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+info: 6/7/2021 22:38:18.686 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+dbug: 6/7/2021 22:38:18.688 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 6/7/2021 22:38:18.689 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 6/7/2021 22:38:18.690 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:38:18.691 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:18.691 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:18.781 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:38:18.783 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:18.783 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:18.783 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:18.783 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:18.786 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:38:18.793 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'User' tracked by 'DbContext' changed state from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:38:18.795 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:18.795 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:18.799 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:18.799 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:18.910 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DbContext' disposed.
+dbug: 6/7/2021 22:38:31.221 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupsGroupId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:38:31.222 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'UsersUserId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:38:31.222 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupId.Assignment' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 6/7/2021 22:38:31.332 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+dbug: 6/7/2021 22:38:31.405 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.416 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.419 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.419 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.420 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.421 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.423 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.425 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.425 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.425 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.431 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.435 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (4ms).
+dbug: 6/7/2021 22:38:31.439 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: 6/7/2021 22:38:31.451 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+dbug: 6/7/2021 22:38:31.451 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.452 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.556 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:38:31.573 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:31.580 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:31.647 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.647 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.649 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:38:31.652 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:38:31.652 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.652 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:38:31.653 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:38:31.653 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.653 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:38:31.653 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+info: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+info: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+info: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+info: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+info: 6/7/2021 22:38:31.654 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+dbug: 6/7/2021 22:38:31.656 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 6/7/2021 22:38:31.658 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 6/7/2021 22:38:31.659 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:38:31.659 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.659 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.677 RelationalEventId.MigrateUsingConnection[20400] (Microsoft.EntityFrameworkCore.Migrations) 
+      Migrating using database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.677 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.677 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.680 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 6/7/2021 22:38:31.681 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (1ms).
+dbug: 6/7/2021 22:38:31.681 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.681 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.683 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: 6/7/2021 22:38:31.686 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+dbug: 6/7/2021 22:38:31.686 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.686 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.686 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.686 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.693 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:38:31.693 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:38:31.694 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.694 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.694 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.694 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.694 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: 6/7/2021 22:38:31.695 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+dbug: 6/7/2021 22:38:31.695 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.696 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (0ms).
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.697 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: 6/7/2021 22:38:31.698 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+dbug: 6/7/2021 22:38:31.698 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.698 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.699 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 6/7/2021 22:38:31.699 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 6/7/2021 22:38:31.699 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.699 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.699 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: 6/7/2021 22:38:31.700 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+dbug: 6/7/2021 22:38:31.702 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 6/7/2021 22:38:31.702 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.703 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+info: 6/7/2021 22:38:31.731 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations) 
+      Applying migration '20210606014831_InitialCreate'.
+dbug: 6/7/2021 22:38:31.779 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.779 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.779 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gifts" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gifts" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gifts_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gifts" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gifts" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gifts_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Groups" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Groups" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Groups_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Groups" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Groups" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Groups_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Users" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_Users_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Users" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_Users_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:38:31.780 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Groups_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Groups" ("Id") ON DELETE RESTRICT
+      );
+fail: 6/7/2021 22:38:31.784 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Groups_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Groups" ("Id") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:38:31.785 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:38:31.785 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:38:31.785 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:38:31.786 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DbContext' disposed.
+dbug: 6/7/2021 22:45:35.662 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupsGroupId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:45:35.662 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'UsersUserId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:45:35.662 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupId.Assignment' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 6/7/2021 22:45:35.771 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+dbug: 6/7/2021 22:45:35.865 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:35.885 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:35.891 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:35.891 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:35.893 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:35.895 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:35.903 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:35.906 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:35.907 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:35.907 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:35.916 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:35.920 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (5ms).
+dbug: 6/7/2021 22:45:35.926 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: 6/7/2021 22:45:35.938 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+dbug: 6/7/2021 22:45:35.939 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:35.939 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:36.077 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.098 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:45:36.105 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:45:36.181 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:36.181 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:36.183 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:45:36.186 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:45:36.187 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.187 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.187 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+info: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:45:36.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+info: 6/7/2021 22:45:36.189 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+dbug: 6/7/2021 22:45:36.191 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 6/7/2021 22:45:36.193 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 6/7/2021 22:45:36.194 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:45:36.194 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:45:36.195 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:45:36.293 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.304 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.313 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'User' tracked by 'DbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.315 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:45:36.316 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:45:36.316 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:45:36.316 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'User' tracked by 'DbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:45:36.325 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:45:36.395 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DbContext' disposed.
+dbug: 6/7/2021 22:46:05.950 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupsGroupId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:46:05.950 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'UsersUserId.GroupUser (Dictionary<string, object>)' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 6/7/2021 22:46:05.950 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'GroupId.Assignment' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 6/7/2021 22:46:06.057 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+dbug: 6/7/2021 22:46:06.131 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.141 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.144 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.144 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.146 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.147 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.149 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.151 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.151 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.152 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.157 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.161 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (3ms).
+dbug: 6/7/2021 22:46:06.165 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: 6/7/2021 22:46:06.175 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+dbug: 6/7/2021 22:46:06.176 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.176 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.281 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 6/7/2021 22:46:06.298 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:46:06.304 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:46:06.372 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.372 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.374 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:46:06.376 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:46:06.377 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.377 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.377 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gift" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Gift" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gift_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Group" (
+          "GroupId" INTEGER NOT NULL CONSTRAINT "PK_Group" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Group_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "User" (
+          "UserId" INTEGER NOT NULL CONSTRAINT "PK_User" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_User_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+info: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Group_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Group" ("GroupId") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+info: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "GroupUser" (
+          "GroupsGroupId" INTEGER NOT NULL,
+          "UsersUserId" INTEGER NOT NULL,
+          CONSTRAINT "PK_GroupUser" PRIMARY KEY ("GroupsGroupId", "UsersUserId"),
+          CONSTRAINT "FK_GroupUser_Group_GroupsGroupId" FOREIGN KEY ("GroupsGroupId") REFERENCES "Group" ("GroupId") ON DELETE CASCADE,
+          CONSTRAINT "FK_GroupUser_User_UsersUserId" FOREIGN KEY ("UsersUserId") REFERENCES "User" ("UserId") ON DELETE CASCADE
+      );
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+info: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "User" ("UserId", "FirstName", "LastName")
+      VALUES (1, 'Luis', 'Garcia');
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.378 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+info: 6/7/2021 22:46:06.379 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Assignment_GroupId" ON "Assignment" ("GroupId");
+dbug: 6/7/2021 22:46:06.379 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.379 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.379 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+info: 6/7/2021 22:46:06.379 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_GroupUser_UsersUserId" ON "GroupUser" ("UsersUserId");
+dbug: 6/7/2021 22:46:06.381 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 6/7/2021 22:46:06.382 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 6/7/2021 22:46:06.383 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:46:06.383 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.384 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.401 RelationalEventId.MigrateUsingConnection[20400] (Microsoft.EntityFrameworkCore.Migrations) 
+      Migrating using database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.401 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.402 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.404 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 6/7/2021 22:46:06.405 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (1ms).
+dbug: 6/7/2021 22:46:06.405 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.406 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.407 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: 6/7/2021 22:46:06.411 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+dbug: 6/7/2021 22:46:06.411 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.411 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.411 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.411 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.419 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DbContext'.
+dbug: 6/7/2021 22:46:06.419 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DbContext'.
+dbug: 6/7/2021 22:46:06.420 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.420 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.420 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.420 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.420 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: 6/7/2021 22:46:06.421 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+dbug: 6/7/2021 22:46:06.421 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.422 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (0ms).
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.423 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: 6/7/2021 22:46:06.423 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+dbug: 6/7/2021 22:46:06.424 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.424 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.425 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 6/7/2021 22:46:06.425 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 6/7/2021 22:46:06.425 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.425 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.425 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: 6/7/2021 22:46:06.426 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+dbug: 6/7/2021 22:46:06.428 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 6/7/2021 22:46:06.428 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.429 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+info: 6/7/2021 22:46:06.455 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations) 
+      Applying migration '20210606014831_InitialCreate'.
+dbug: 6/7/2021 22:46:06.501 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.501 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.501 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'Serializable'.
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gifts" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gifts" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gifts_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+info: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Gifts" (
+          "GiftId" INTEGER NOT NULL CONSTRAINT "PK_Gifts" PRIMARY KEY AUTOINCREMENT,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NULL,
+          "URL" TEXT NULL,
+          "Priority" INTEGER NOT NULL,
+          "UserId" INTEGER NOT NULL,
+          CONSTRAINT "AK_Gifts_Title_UserId" UNIQUE ("Title", "UserId")
+      );
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Groups" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Groups" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Groups_Name" UNIQUE ("Name")
+      );
+info: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Groups" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Groups" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NOT NULL,
+          CONSTRAINT "AK_Groups_Name" UNIQUE ("Name")
+      );
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Users" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_Users_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+info: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Users" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+          "FirstName" TEXT NOT NULL,
+          "LastName" TEXT NOT NULL,
+          CONSTRAINT "AK_Users_FirstName_LastName" UNIQUE ("FirstName", "LastName")
+      );
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 6/7/2021 22:46:06.502 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Groups_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Groups" ("Id") ON DELETE RESTRICT
+      );
+fail: 6/7/2021 22:46:06.506 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Assignment" (
+          "AssignmentID" INTEGER NOT NULL CONSTRAINT "PK_Assignment" PRIMARY KEY AUTOINCREMENT,
+          "GiverAndReceiver" TEXT NOT NULL,
+          "GroupId" INTEGER NULL,
+          CONSTRAINT "AK_Assignment_GiverAndReceiver" UNIQUE ("GiverAndReceiver"),
+          CONSTRAINT "FK_Assignment_Groups_GroupId" FOREIGN KEY ("GroupId") REFERENCES "Groups" ("Id") ON DELETE RESTRICT
+      );
+dbug: 6/7/2021 22:46:06.506 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 6/7/2021 22:46:06.506 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'main' on server '/Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Data/main.db'.
+dbug: 6/7/2021 22:46:06.506 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'main' on server 'main.db'.
+dbug: 6/7/2021 22:46:06.508 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DbContext' disposed.
