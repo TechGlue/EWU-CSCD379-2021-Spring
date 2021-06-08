@@ -64,6 +64,7 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void List_WithUsers_ReturnsAllUser()
         {
+            using DbContext dbContext = new DbContext();
             UserRepository sut = new();
             sut.Create(new()
             {
@@ -74,8 +75,8 @@ namespace SecretSanta.Business.Tests
 
             ICollection<User> users = sut.List();
 
-            Assert.AreEqual(MockData.Users.Count, users.Count);
-            foreach(var mockUser in MockData.Users.Values)
+            Assert.AreEqual(DbContext.Users.Count(), users.Count);
+            foreach(var DbContext in DbContext.Users.Values)
             {
                 Assert.IsNotNull(users.SingleOrDefault(x => x.FirstName == mockUser.FirstName && x.LastName == mockUser.LastName));
             }
