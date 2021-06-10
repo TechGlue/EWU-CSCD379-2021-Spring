@@ -12,22 +12,22 @@ namespace SecretSanta.Business
                 throw new System.ArgumentNullException(nameof(item));
             }
 
-            using DbContext dbContext = new DbContext();
+            using var dbContext = new DbContext();
             dbContext.Users.Add(item);
-            dbContext.SaveChangesAsync();
+            dbContext.SaveChanges();
             return item;
         }
 
         public User? GetItem(int id)
         {
-            using DbContext dbContext = new DbContext();
+            using var dbContext = new DbContext();
             User user = dbContext.Users.Find(id);
             return user;
         }
 
         public ICollection<User> List()
         {
-            using DbContext dbContext = new DbContext();
+            using var dbContext = new DbContext();
             List<User> userList = new List<User>();
             foreach (var user in dbContext.Users)
             {
@@ -38,10 +38,10 @@ namespace SecretSanta.Business
 
         public bool Remove(int id)
         {
-            using DbContext dbContext = new DbContext();
+            using var dbContext = new DbContext();
             User item = dbContext.Users.Find(id);
             dbContext.Users.Remove(item);
-            dbContext.SaveChangesAsync();
+            dbContext.SaveChanges();
             return true;
         }
 
@@ -52,17 +52,21 @@ namespace SecretSanta.Business
                 throw new System.ArgumentNullException(nameof(item));
             }
 
-            User temp = dbContext.Users.Find(item.Id);
+            using var dbContext = new DbContext();
+
+            User temp = dbContext.Users.Find(item.UserId);
+            
             if (temp is null)
             {
                 Create(item);
             }
             else
             {
-                dbContext.Users.Remove(dbContext.Users.Find(item.Id));
+                dbContext.Users.Remove(dbContext.Users.Find(item.UserId));
                 dbContext.Users.Add(item);
             }
-            dbContext.SaveChangesAsync();
+            
+            dbContext.SaveChanges();
         }
     }
 }

@@ -20,6 +20,8 @@ namespace SecretSanta.Data
                 Database.EnsureDeleted();
                 Database.EnsureCreated();
             }
+            
+            Database.Migrate();
         }
 
         public DbSet<Group> Groups => Set<Group>();

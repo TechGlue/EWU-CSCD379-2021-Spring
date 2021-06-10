@@ -60,14 +60,14 @@ namespace SecretSanta.Business
             }
             using DbContext dbContext = new DbContext();
 
-            Group temp = dbContext.Groups.Find(item.Id);
+            Group temp = dbContext.Groups.Find(item.GroupId);
             if (temp is null)
             {
                 Create(item);
             }
             else
             {
-                dbContext.Groups.Remove(dbContext.Groups.Find(item.Id));
+                dbContext.Groups.Remove(dbContext.Groups.Find(item.GroupId));
                 Create(item);
             }
             dbContext.SaveChangesAsync();
