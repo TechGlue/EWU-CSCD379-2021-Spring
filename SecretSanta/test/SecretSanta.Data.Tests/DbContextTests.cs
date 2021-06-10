@@ -22,10 +22,10 @@ namespace SecretSanta.Data.Tests
         [TestMethod]
         public void UserDB_AddingUser_Success()
         {
-            using var db = new DbContext();
+            using DbContext db = new DbContext();
             int count = db.Users.Count();
 
-            db.Users.Add(new User() {UserId = 7, FirstName = "ght", LastName = "yagami"});
+            db.Users.Add(new User() {UserId = 9, FirstName = "t", LastName = "yagami"});
             db.SaveChanges();
               
             Assert.AreEqual(count+1, db.Users.Count());

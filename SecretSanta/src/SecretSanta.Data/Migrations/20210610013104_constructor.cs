@@ -2,7 +2,7 @@
 
 namespace SecretSanta.Data.Migrations
 {
-    public partial class changesDbContext : Migration
+    public partial class constructor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,13 +18,6 @@ namespace SecretSanta.Data.Migrations
                 name: "FK_GroupUser_User_UsersUserId",
                 table: "GroupUser");
 
-            migrationBuilder.DropTable(
-                name: "Gift");
-
-            migrationBuilder.DropUniqueConstraint(
-                name: "AK_Assignment_GiverAndReceiver",
-                table: "Assignment");
-
             migrationBuilder.DropUniqueConstraint(
                 name: "AK_User_FirstName_LastName",
                 table: "User");
@@ -41,115 +34,140 @@ namespace SecretSanta.Data.Migrations
                 name: "PK_Group",
                 table: "Group");
 
-            migrationBuilder.DeleteData(
-                table: "User",
-                keyColumn: "UserId",
-                keyValue: 1);
+            migrationBuilder.DropUniqueConstraint(
+                name: "AK_Gift_Title_UserId",
+                table: "Gift");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_Gift",
+                table: "Gift");
 
             migrationBuilder.RenameTable(
                 name: "User",
-                newName: "Events");
+                newName: "Users");
 
             migrationBuilder.RenameTable(
                 name: "Group",
-                newName: "Speakers");
+                newName: "Groups");
 
-            migrationBuilder.AlterColumn<string>(
-                name: "GiverAndReceiver",
-                table: "Assignment",
-                type: "TEXT",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "TEXT");
+            migrationBuilder.RenameTable(
+                name: "Gift",
+                newName: "Gifts");
 
             migrationBuilder.AddUniqueConstraint(
-                name: "AK_Events_FirstName_LastName",
-                table: "Events",
+                name: "AK_Users_FirstName_LastName",
+                table: "Users",
                 columns: new[] { "FirstName", "LastName" });
 
             migrationBuilder.AddPrimaryKey(
-                name: "PK_Events",
-                table: "Events",
+                name: "PK_Users",
+                table: "Users",
                 column: "UserId");
 
+            migrationBuilder.AddUniqueConstraint(
+                name: "AK_Groups_Name",
+                table: "Groups",
+                column: "Name");
+
             migrationBuilder.AddPrimaryKey(
-                name: "PK_Speakers",
-                table: "Speakers",
+                name: "PK_Groups",
+                table: "Groups",
                 column: "GroupId");
 
+            migrationBuilder.AddUniqueConstraint(
+                name: "AK_Gifts_Title_UserId",
+                table: "Gifts",
+                columns: new[] { "Title", "UserId" });
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_Gifts",
+                table: "Gifts",
+                column: "Id");
+
             migrationBuilder.AddForeignKey(
-                name: "FK_Assignment_Speakers_GroupId",
+                name: "FK_Assignment_Groups_GroupId",
                 table: "Assignment",
                 column: "GroupId",
-                principalTable: "Speakers",
+                principalTable: "Groups",
                 principalColumn: "GroupId",
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_GroupUser_Events_UsersUserId",
+                name: "FK_GroupUser_Groups_GroupsGroupId",
                 table: "GroupUser",
-                column: "UsersUserId",
-                principalTable: "Events",
-                principalColumn: "UserId",
+                column: "GroupsGroupId",
+                principalTable: "Groups",
+                principalColumn: "GroupId",
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_GroupUser_Speakers_GroupsGroupId",
+                name: "FK_GroupUser_Users_UsersUserId",
                 table: "GroupUser",
-                column: "GroupsGroupId",
-                principalTable: "Speakers",
-                principalColumn: "GroupId",
+                column: "UsersUserId",
+                principalTable: "Users",
+                principalColumn: "UserId",
                 onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Assignment_Speakers_GroupId",
+                name: "FK_Assignment_Groups_GroupId",
                 table: "Assignment");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_GroupUser_Events_UsersUserId",
+                name: "FK_GroupUser_Groups_GroupsGroupId",
                 table: "GroupUser");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_GroupUser_Speakers_GroupsGroupId",
+                name: "FK_GroupUser_Users_UsersUserId",
                 table: "GroupUser");
 
+            migrationBuilder.DropUniqueConstraint(
+                name: "AK_Users_FirstName_LastName",
+                table: "Users");
+
             migrationBuilder.DropPrimaryKey(
-                name: "PK_Speakers",
-                table: "Speakers");
+                name: "PK_Users",
+                table: "Users");
 
             migrationBuilder.DropUniqueConstraint(
-                name: "AK_Events_FirstName_LastName",
-                table: "Events");
+                name: "AK_Groups_Name",
+                table: "Groups");
 
             migrationBuilder.DropPrimaryKey(
-                name: "PK_Events",
-                table: "Events");
+                name: "PK_Groups",
+                table: "Groups");
+
+            migrationBuilder.DropUniqueConstraint(
+                name: "AK_Gifts_Title_UserId",
+                table: "Gifts");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_Gifts",
+                table: "Gifts");
 
             migrationBuilder.RenameTable(
-                name: "Speakers",
+                name: "Users",
+                newName: "User");
+
+            migrationBuilder.RenameTable(
+                name: "Groups",
                 newName: "Group");
 
             migrationBuilder.RenameTable(
-                name: "Events",
-                newName: "User");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "GiverAndReceiver",
-                table: "Assignment",
-                type: "TEXT",
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "TEXT",
-                oldNullable: true);
+                name: "Gifts",
+                newName: "Gift");
 
             migrationBuilder.AddUniqueConstraint(
-                name: "AK_Assignment_GiverAndReceiver",
-                table: "Assignment",
-                column: "GiverAndReceiver");
+                name: "AK_User_FirstName_LastName",
+                table: "User",
+                columns: new[] { "FirstName", "LastName" });
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_User",
+                table: "User",
+                column: "UserId");
 
             migrationBuilder.AddUniqueConstraint(
                 name: "AK_Group_Name",
@@ -162,37 +180,14 @@ namespace SecretSanta.Data.Migrations
                 column: "GroupId");
 
             migrationBuilder.AddUniqueConstraint(
-                name: "AK_User_FirstName_LastName",
-                table: "User",
-                columns: new[] { "FirstName", "LastName" });
+                name: "AK_Gift_Title_UserId",
+                table: "Gift",
+                columns: new[] { "Title", "UserId" });
 
             migrationBuilder.AddPrimaryKey(
-                name: "PK_User",
-                table: "User",
-                column: "UserId");
-
-            migrationBuilder.CreateTable(
-                name: "Gift",
-                columns: table => new
-                {
-                    GiftId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Description = table.Column<string>(type: "TEXT", nullable: true),
-                    Priority = table.Column<int>(type: "INTEGER", nullable: false),
-                    Title = table.Column<string>(type: "TEXT", nullable: false),
-                    URL = table.Column<string>(type: "TEXT", nullable: true),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Gift", x => x.GiftId);
-                    table.UniqueConstraint("AK_Gift_Title_UserId", x => new { x.Title, x.UserId });
-                });
-
-            migrationBuilder.InsertData(
-                table: "User",
-                columns: new[] { "UserId", "FirstName", "LastName" },
-                values: new object[] { 1, "Luis", "Garcia" });
+                name: "PK_Gift",
+                table: "Gift",
+                column: "Id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Assignment_Group_GroupId",

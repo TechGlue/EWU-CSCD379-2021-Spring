@@ -17,7 +17,7 @@ namespace SecretSanta.Business
             dbContext.Add<Group>(item);
             foreach (User user in item.Users)
             {
-                AddToGroup(item.Id, user.Id);
+              //  AddToGroup(item.Id, user.Id);
             }
             dbContext.SaveChangesAsync();
             return item;

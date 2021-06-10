@@ -9,8 +9,8 @@ using SecretSanta.Data;
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    [Migration("20210607021401_definedtables")]
-    partial class definedtables
+    [Migration("20210610024849_onModelEdits")]
+    partial class onModelEdits
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,12 +40,15 @@ namespace SecretSanta.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("GiverAndReceiver")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("GroupId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("AssignmentID");
+
+                    b.HasAlternateKey("GiverAndReceiver");
 
                     b.HasIndex("GroupId");
 
@@ -54,7 +57,7 @@ namespace SecretSanta.Data.Migrations
 
             modelBuilder.Entity("SecretSanta.Data.Gift", b =>
                 {
-                    b.Property<int>("GiftId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -74,7 +77,7 @@ namespace SecretSanta.Data.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("GiftId");
+                    b.HasKey("Id");
 
                     b.HasAlternateKey("Title", "UserId");
 
@@ -117,6 +120,26 @@ namespace SecretSanta.Data.Migrations
                     b.HasAlternateKey("FirstName", "LastName");
 
                     b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            FirstName = "Luis",
+                            LastName = "Garcia"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            FirstName = "Jeff",
+                            LastName = "Kapplan"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            FirstName = "Terry",
+                            LastName = "Crews"
+                        });
                 });
 
             modelBuilder.Entity("GroupUser", b =>

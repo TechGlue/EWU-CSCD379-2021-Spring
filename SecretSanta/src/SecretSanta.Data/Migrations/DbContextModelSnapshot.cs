@@ -125,6 +125,18 @@ namespace SecretSanta.Data.Migrations
                             UserId = 1,
                             FirstName = "Luis",
                             LastName = "Garcia"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            FirstName = "Jeff",
+                            LastName = "Kapplan"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            FirstName = "Terry",
+                            LastName = "Crews"
                         });
                 });
 

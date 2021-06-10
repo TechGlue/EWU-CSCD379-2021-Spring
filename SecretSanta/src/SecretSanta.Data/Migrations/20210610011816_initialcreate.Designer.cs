@@ -9,8 +9,8 @@ using SecretSanta.Data;
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    [Migration("20210608054536_changedValueNamesForGift")]
-    partial class changedValueNamesForGift
+    [Migration("20210610011816_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -127,6 +127,18 @@ namespace SecretSanta.Data.Migrations
                             UserId = 1,
                             FirstName = "Luis",
                             LastName = "Garcia"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            FirstName = "Jeff",
+                            LastName = "Kapplan"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            FirstName = "Terry",
+                            LastName = "Crews"
                         });
                 });
 
