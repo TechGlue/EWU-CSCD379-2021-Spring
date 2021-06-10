@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SecretSanta.Data;
 
 namespace SecretSanta.Business
@@ -23,23 +24,13 @@ namespace SecretSanta.Business
         public Group? GetItem(int id)
         {
             using DbContext dbContext = new DbContext();
-            
-            if (dbContext.Groups.Find(id, ))
-            {
-                return user;
-            }
-            return null;
+            return dbContext.Groups.Find(id);
         }
 
         public ICollection<Group> List()
         {
             using DbContext dbContext = new DbContext();
-            List<Group> groupList = new List<Group>();
-            foreach (var group in dbContext.Groups)
-            {
-                groupList.Add(group);
-            }
-            return groupList;
+            return dbContext.Groups.ToList();
         }
 
         public bool Remove(int id)
