@@ -10,23 +10,23 @@ namespace SecretSanta.Data
 {
     public class DbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        
-        public DbContext() : base(new DbContextOptionsBuilder<DbContext>().UseSqlite("Data Source=main.db").Options)
+        private bool created = false;
+        public DbContext()
+            : base(new DbContextOptionsBuilder<DbContext>().UseSqlite("Data Source=main.db").Options)
         {
         }
-        
+
         public DbSet<Group> Groups => Set<Group>();
         public DbSet<User> Users => Set<User>();
         public DbSet<Gift> Gifts => Set<Gift>();
-
         
+      
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             if (modelBuilder is null)
             {
                 throw new ArgumentNullException(nameof(modelBuilder));
             }
-            
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Group>().ToTable("Group");
             modelBuilder.Entity<Gift>().ToTable("Gift");
@@ -37,7 +37,7 @@ namespace SecretSanta.Data
                 .HasAlternateKey(gift => new {gift.Title, gift.UserId});
             modelBuilder.Entity<Group>()
                 .HasAlternateKey(group => new {group.Name});
-             modelBuilder.Entity<Assignment>()
+            modelBuilder.Entity<Assignment>()
                 .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
 
             modelBuilder.Entity<User>().HasData(DbInitializer.Users());
