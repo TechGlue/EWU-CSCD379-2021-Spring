@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SecretSanta.Data;
 
 namespace SecretSanta.Business
@@ -28,12 +29,7 @@ namespace SecretSanta.Business
         public ICollection<User> List()
         {
             using var dbContext = new DbContext();
-            List<User> userList = new List<User>();
-            foreach (var user in dbContext.Users)
-            {
-                userList.Add(user);
-            }
-            return userList;
+            return dbContext.Users.ToList();
         }
 
         public bool Remove(int id)
