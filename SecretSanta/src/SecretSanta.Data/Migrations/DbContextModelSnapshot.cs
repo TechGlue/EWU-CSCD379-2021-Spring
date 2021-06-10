@@ -55,7 +55,7 @@ namespace SecretSanta.Data.Migrations
 
             modelBuilder.Entity("SecretSanta.Data.Gift", b =>
                 {
-                    b.Property<int>("GiftId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -75,7 +75,7 @@ namespace SecretSanta.Data.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("GiftId");
+                    b.HasKey("Id");
 
                     b.HasAlternateKey("Title", "UserId");
 
@@ -125,6 +125,18 @@ namespace SecretSanta.Data.Migrations
                             UserId = 1,
                             FirstName = "Luis",
                             LastName = "Garcia"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            FirstName = "Jeff",
+                            LastName = "Kapplan"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            FirstName = "Terry",
+                            LastName = "Crews"
                         });
                 });
 

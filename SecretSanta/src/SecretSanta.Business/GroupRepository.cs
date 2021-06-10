@@ -13,7 +13,13 @@ namespace SecretSanta.Business
                 throw new ArgumentNullException(nameof(item));
             }
 
-            MockData.Groups[item.GroupId] = item;
+            using DbContext dbContext = new DbContext();
+            dbContext.Add<Group>(item);
+            foreach (User user in item.Users)
+            {
+              //  AddToGroup(item.Id, user.Id);
+            }
+            dbContext.SaveChangesAsync();
             return item;
         }
 
@@ -28,12 +34,22 @@ namespace SecretSanta.Business
 
         public ICollection<Group> List()
         {
-            return MockData.Groups.Values;
+            using DbContext dbContext = new DbContext();
+            List<Group> groupList = new List<Group>();
+            foreach (var group in dbContext.Groups)
+            {
+                groupList.Add(group);
+            }
+            return groupList;
         }
 
         public bool Remove(int id)
         {
-            return MockData.Groups.Remove(id);
+            using DbContext dbContext = new DbContext();
+                Group item = dbContext.Groups.Find(id);
+                dbContext.Groups.Remove(item);
+                dbContext.SaveChangesAsync();
+                return true;
         }
 
         public void Save(Group item)
@@ -42,13 +58,28 @@ namespace SecretSanta.Business
             {
                 throw new ArgumentNullException(nameof(item));
             }
+            using DbContext dbContext = new DbContext();
 
-            MockData.Groups[item.GroupId] = item;
+            Group temp = dbContext.Groups.Find(item.GroupId);
+            if (temp is null)
+            {
+                Create(item);
+            }
+            else
+            {
+                dbContext.Groups.Remove(dbContext.Groups.Find(item.GroupId));
+                Create(item);
+            }
+            dbContext.SaveChangesAsync();
         }
 
         public AssignmentResult GenerateAssignments(int groupId)
         {
-            if (!MockData.Groups.TryGetValue(groupId, out Group? group))
+            Assignment assignment;
+            using DbContext dbContext = new DbContext();
+
+            Group group = GetItem(groupId)!;
+            if (group is null)
             {
                 return AssignmentResult.Error("Group not found");
             }

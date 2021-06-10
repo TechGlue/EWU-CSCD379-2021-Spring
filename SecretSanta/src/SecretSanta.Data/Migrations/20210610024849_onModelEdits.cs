@@ -2,7 +2,7 @@
 
 namespace SecretSanta.Data.Migrations
 {
-    public partial class definedtables : Migration
+    public partial class onModelEdits : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,10 +17,6 @@ namespace SecretSanta.Data.Migrations
             migrationBuilder.DropForeignKey(
                 name: "FK_GroupUser_Users_UsersUserId",
                 table: "GroupUser");
-
-            migrationBuilder.DropUniqueConstraint(
-                name: "AK_Assignment_GiverAndReceiver",
-                table: "Assignment");
 
             migrationBuilder.DropUniqueConstraint(
                 name: "AK_Users_FirstName_LastName",
@@ -58,14 +54,6 @@ namespace SecretSanta.Data.Migrations
                 name: "Gifts",
                 newName: "Gift");
 
-            migrationBuilder.AlterColumn<string>(
-                name: "GiverAndReceiver",
-                table: "Assignment",
-                type: "TEXT",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "TEXT");
-
             migrationBuilder.AddUniqueConstraint(
                 name: "AK_User_FirstName_LastName",
                 table: "User",
@@ -94,7 +82,7 @@ namespace SecretSanta.Data.Migrations
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Gift",
                 table: "Gift",
-                column: "GiftId");
+                column: "Id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Assignment_Group_GroupId",
@@ -171,21 +159,6 @@ namespace SecretSanta.Data.Migrations
                 name: "Gift",
                 newName: "Gifts");
 
-            migrationBuilder.AlterColumn<string>(
-                name: "GiverAndReceiver",
-                table: "Assignment",
-                type: "TEXT",
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "TEXT",
-                oldNullable: true);
-
-            migrationBuilder.AddUniqueConstraint(
-                name: "AK_Assignment_GiverAndReceiver",
-                table: "Assignment",
-                column: "GiverAndReceiver");
-
             migrationBuilder.AddUniqueConstraint(
                 name: "AK_Users_FirstName_LastName",
                 table: "Users",
@@ -214,7 +187,7 @@ namespace SecretSanta.Data.Migrations
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Gifts",
                 table: "Gifts",
-                column: "GiftId");
+                column: "Id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Assignment_Groups_GroupId",

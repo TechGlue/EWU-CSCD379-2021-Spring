@@ -2,15 +2,15 @@
 
 namespace SecretSanta.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialcreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Gifts",
+                name: "Gift",
                 columns: table => new
                 {
-                    GiftId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
@@ -20,37 +20,37 @@ namespace SecretSanta.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Gifts", x => x.GiftId);
-                    table.UniqueConstraint("AK_Gifts_Title_UserId", x => new { x.Title, x.UserId });
+                    table.PrimaryKey("PK_Gift", x => x.Id);
+                    table.UniqueConstraint("AK_Gift_Title_UserId", x => new { x.Title, x.UserId });
                 });
 
             migrationBuilder.CreateTable(
-                name: "Groups",
+                name: "Group",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    GroupId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Groups", x => x.Id);
-                    table.UniqueConstraint("AK_Groups_Name", x => x.Name);
+                    table.PrimaryKey("PK_Group", x => x.GroupId);
+                    table.UniqueConstraint("AK_Group_Name", x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: false),
                     LastName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                    table.UniqueConstraint("AK_Users_FirstName_LastName", x => new { x.FirstName, x.LastName });
+                    table.PrimaryKey("PK_User", x => x.UserId);
+                    table.UniqueConstraint("AK_User_FirstName_LastName", x => new { x.FirstName, x.LastName });
                 });
 
             migrationBuilder.CreateTable(
@@ -67,10 +67,10 @@ namespace SecretSanta.Data.Migrations
                     table.PrimaryKey("PK_Assignment", x => x.AssignmentID);
                     table.UniqueConstraint("AK_Assignment_GiverAndReceiver", x => x.GiverAndReceiver);
                     table.ForeignKey(
-                        name: "FK_Assignment_Groups_GroupId",
+                        name: "FK_Assignment_Group_GroupId",
                         column: x => x.GroupId,
-                        principalTable: "Groups",
-                        principalColumn: "Id",
+                        principalTable: "Group",
+                        principalColumn: "GroupId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -78,25 +78,40 @@ namespace SecretSanta.Data.Migrations
                 name: "GroupUser",
                 columns: table => new
                 {
-                    GroupsId = table.Column<int>(type: "INTEGER", nullable: false),
-                    UsersId = table.Column<int>(type: "INTEGER", nullable: false)
+                    GroupsGroupId = table.Column<int>(type: "INTEGER", nullable: false),
+                    UsersUserId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GroupUser", x => new { x.GroupsId, x.UsersId });
+                    table.PrimaryKey("PK_GroupUser", x => new { x.GroupsGroupId, x.UsersUserId });
                     table.ForeignKey(
-                        name: "FK_GroupUser_Groups_GroupsId",
-                        column: x => x.GroupsId,
-                        principalTable: "Groups",
-                        principalColumn: "Id",
+                        name: "FK_GroupUser_Group_GroupsGroupId",
+                        column: x => x.GroupsGroupId,
+                        principalTable: "Group",
+                        principalColumn: "GroupId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_GroupUser_Users_UsersId",
-                        column: x => x.UsersId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
+                        name: "FK_GroupUser_User_UsersUserId",
+                        column: x => x.UsersUserId,
+                        principalTable: "User",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "UserId", "FirstName", "LastName" },
+                values: new object[] { 1, "Luis", "Garcia" });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "UserId", "FirstName", "LastName" },
+                values: new object[] { 2, "Jeff", "Kapplan" });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "UserId", "FirstName", "LastName" },
+                values: new object[] { 3, "Terry", "Crews" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Assignment_GroupId",
@@ -104,9 +119,9 @@ namespace SecretSanta.Data.Migrations
                 column: "GroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GroupUser_UsersId",
+                name: "IX_GroupUser_UsersUserId",
                 table: "GroupUser",
-                column: "UsersId");
+                column: "UsersUserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -115,16 +130,16 @@ namespace SecretSanta.Data.Migrations
                 name: "Assignment");
 
             migrationBuilder.DropTable(
-                name: "Gifts");
+                name: "Gift");
 
             migrationBuilder.DropTable(
                 name: "GroupUser");
 
             migrationBuilder.DropTable(
-                name: "Groups");
+                name: "Group");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "User");
         }
     }
 }

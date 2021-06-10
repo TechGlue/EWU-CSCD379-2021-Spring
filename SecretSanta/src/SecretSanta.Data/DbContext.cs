@@ -10,21 +10,15 @@ namespace SecretSanta.Data
 {
     public class DbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        private bool created = false;
-        public DbContext()
-            : base(new DbContextOptionsBuilder<DbContext>().UseSqlite("Data Source=main.db").Options)
+        
+        public DbContext() : base(new DbContextOptionsBuilder<DbContext>().UseSqlite("Data Source=main.db").Options)
         {
-            if (!created)
-            {
-                created = true;
-                Database.EnsureDeleted();
-                Database.EnsureCreated();
-            }
         }
-
+        
         public DbSet<Group> Groups => Set<Group>();
         public DbSet<User> Users => Set<User>();
         public DbSet<Gift> Gifts => Set<Gift>();
+
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +26,7 @@ namespace SecretSanta.Data
             {
                 throw new ArgumentNullException(nameof(modelBuilder));
             }
+            
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Group>().ToTable("Group");
             modelBuilder.Entity<Gift>().ToTable("Gift");
