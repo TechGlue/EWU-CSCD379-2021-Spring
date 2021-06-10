@@ -14,18 +14,17 @@ namespace SecretSanta.Business
             }
 
             using DbContext dbContext = new DbContext();
-            dbContext.Add<Group>(item);
-            foreach (User user in item.Users)
-            {
-              //  AddToGroup(item.Id, user.Id);
-            }
+            dbContext.Groups.Add(item);
             dbContext.SaveChangesAsync();
             return item;
         }
 
+        
         public Group? GetItem(int id)
         {
-            if (MockData.Groups.TryGetValue(id, out Group? user))
+            using DbContext dbContext = new DbContext();
+            
+            if (dbContext.Groups.Find(id, ))
             {
                 return user;
             }

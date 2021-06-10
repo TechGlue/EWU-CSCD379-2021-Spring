@@ -17,6 +17,7 @@ namespace SecretSanta.Data
 
         public static List<Group> Groups()
         {
+            new Group() {GroupId = 1, Users = {new User() {UserId = 1, FirstName = "papi", LastName = "Chulo"}}};
             return new List<Group>();
         }
     }
