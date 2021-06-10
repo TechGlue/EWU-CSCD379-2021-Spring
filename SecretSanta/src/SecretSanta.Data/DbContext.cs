@@ -17,6 +17,7 @@ namespace SecretSanta.Data
 
         public DbSet<User> Events => Set<User>();
         public DbSet<Group> Speakers => Set<Group>();
+        public DbSet<Gift> Gifts => Set<Gift>();
 
         private StreamWriter LogStream { get; } = new StreamWriter("dblog.txt", append: true);
 
