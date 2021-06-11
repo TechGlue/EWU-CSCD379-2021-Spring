@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +14,6 @@ namespace SecretSanta.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            
             services.AddDbContext<DbContext>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IGroupRepository, GroupRepository>();
@@ -26,8 +26,8 @@ namespace SecretSanta.Api
                 options.AddDefaultPolicy(builder =>
                 {
                     builder.AllowAnyOrigin()
-                           .AllowAnyMethod()
-                           .AllowAnyHeader();
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
                 });
             });
         }
@@ -39,6 +39,14 @@ namespace SecretSanta.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<DbContext>();
+                context.Database.EnsureDeleted();
+                context.Database.EnsureCreated();
+            }
+
 
             app.UseOpenApi();
             app.UseSwaggerUi3();

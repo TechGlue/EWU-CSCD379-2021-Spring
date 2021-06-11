@@ -9,8 +9,8 @@ using SecretSanta.Data;
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    [Migration("20210610011816_initialcreate")]
-    partial class initialcreate
+    [Migration("20210611082010_initf")]
+    partial class initf
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

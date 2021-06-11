@@ -2,7 +2,7 @@
 
 namespace SecretSanta.Data.Migrations
 {
-    public partial class changes : Migration
+    public partial class initf : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

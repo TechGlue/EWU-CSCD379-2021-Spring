@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using SecretSanta.Data;
+using DbContext = SecretSanta.Data.DbContext;
 
 namespace SecretSanta.Business
 {
     public class GroupRepository : IGroupRepository
     {
+        private DbContext Context { get; }
+        public GroupRepository(DbContext dbContext)
+            => Context = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+
+        
         public Group Create(Group item)
         {
             if (item is null)
@@ -14,32 +21,27 @@ namespace SecretSanta.Business
                 throw new ArgumentNullException(nameof(item));
             }
 
-            using DbContext dbContext = new DbContext();
-            dbContext.Groups.Add(item);
-            dbContext.SaveChangesAsync();
+            Context.Groups.Add(item);
+            Context.SaveChanges();
             return item;
         }
 
-        
+
         public Group? GetItem(int id)
-        {
-            using DbContext dbContext = new DbContext();
-            return dbContext.Groups.Find(id);
-        }
+            => List().FirstOrDefault<Group>(i => i.GroupId == id);
 
         public ICollection<Group> List()
-        {
-            using DbContext dbContext = new DbContext();
-            return dbContext.Groups.ToList();
-        }
+            => Context.Groups
+                .Include(group => group.Users)
+                .Include(group => group.Assignments)
+                .ToList();
 
         public bool Remove(int id)
         {
-            using DbContext dbContext = new DbContext();
-                Group item = dbContext.Groups.Find(id);
-                dbContext.Groups.Remove(item);
-                dbContext.SaveChangesAsync();
-                return true;
+            Group item = Context.Groups.Find(id);
+            Context.Groups.Remove(item);
+            Context.SaveChanges();
+            return true;
         }
 
         public void Save(Group item)
@@ -48,27 +50,40 @@ namespace SecretSanta.Business
             {
                 throw new ArgumentNullException(nameof(item));
             }
-            using DbContext dbContext = new DbContext();
 
-            Group temp = dbContext.Groups.Find(item.GroupId);
-            if (temp is null)
-            {
-                Create(item);
-            }
-            else
-            {
-                dbContext.Groups.Remove(dbContext.Groups.Find(item.GroupId));
-                Create(item);
-            }
-            dbContext.SaveChangesAsync();
+            Context.Groups.Update(item);
+            Context.SaveChanges();
         }
+
+        // public bool AddUser(int groupId, int userId)
+        // {
+        //     using var dbContext = new DbContext();
+        //
+        //     Group? @group = dbContext.Groups.Find(groupId);
+        //     User? @user = dbContext.Users.Find(userId);
+        //
+        //     if (user is not null && group is not null)
+        //     {
+        //          dbContext.Users.Find(user.UserId).Groups.Add(group);
+        //          dbContext.Groups.Find(group.GroupId).Users.Add(user);
+        //          dbContext.SaveChangesAsync();
+        //          return true;
+        //     }
+        //
+        //     return false;
+        // }
+        //
+        // public List<Group> GetUsers(int groupID)
+        // {
+        //     using var dbContext = new DbContext();
+        //     return dbContext.Groups.ToList();
+        // }
 
         public AssignmentResult GenerateAssignments(int groupId)
         {
-            Assignment assignment;
-            using DbContext dbContext = new DbContext();
 
-            Group group = GetItem(groupId)!;
+            Group? @group = GetItem(groupId);
+            
             if (group is null)
             {
                 return AssignmentResult.Error("Group not found");
@@ -96,8 +111,9 @@ namespace SecretSanta.Business
             for(int i = 0; i < users.Count; i++)
             {
                 int endIndex = (i + 1) % users.Count;
-                group.Assignments.Add(new Assignment(users[i], users[endIndex]));
+               // group.Assignments.Add(new Assignment(){GroupId = group.GroupId, Giver = users[i], Receiver =  users[endIndex]});
             }
+            Save(group);
             return AssignmentResult.Success();
         }
     }

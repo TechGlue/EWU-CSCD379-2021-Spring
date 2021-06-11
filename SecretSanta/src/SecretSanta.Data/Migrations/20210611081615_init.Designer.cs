@@ -9,8 +9,8 @@ using SecretSanta.Data;
 namespace SecretSanta.Data.Migrations
 {
     [DbContext(typeof(DbContext))]
-    [Migration("20210610013104_constructor")]
-    partial class constructor
+    [Migration("20210611081615_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -81,7 +81,7 @@ namespace SecretSanta.Data.Migrations
 
                     b.HasAlternateKey("Title", "UserId");
 
-                    b.ToTable("Gifts");
+                    b.ToTable("Gift");
                 });
 
             modelBuilder.Entity("SecretSanta.Data.Group", b =>
@@ -98,7 +98,7 @@ namespace SecretSanta.Data.Migrations
 
                     b.HasAlternateKey("Name");
 
-                    b.ToTable("Groups");
+                    b.ToTable("Group");
                 });
 
             modelBuilder.Entity("SecretSanta.Data.User", b =>
@@ -119,7 +119,7 @@ namespace SecretSanta.Data.Migrations
 
                     b.HasAlternateKey("FirstName", "LastName");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
 
                     b.HasData(
                         new
