@@ -87,7 +87,7 @@ namespace SecretSanta.Business
             for(int i = 0; i < users.Count; i++)
             {
                 int endIndex = (i + 1) % users.Count;
-                group.Assignments.Add(new Assignment(){GroupId = group.GroupId, Giver = users[i], Receiver =  users[endIndex]});
+               // group.Assignments.Add(new Assignment(){GroupId = group.GroupId, Giver = users[i], Receiver =  users[endIndex]});
             }
             Save(group);
             return AssignmentResult.Success();
