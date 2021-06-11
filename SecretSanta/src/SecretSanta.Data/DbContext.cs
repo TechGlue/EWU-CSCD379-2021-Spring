@@ -28,17 +28,19 @@ namespace SecretSanta.Data
                 throw new ArgumentNullException(nameof(modelBuilder));
             }
             modelBuilder.Entity<User>().ToTable("User");
-            modelBuilder.Entity<Group>().ToTable("Group");
             modelBuilder.Entity<Gift>().ToTable("Gift");
+
+            modelBuilder.Entity<Group>().HasKey(g => new {g.GroupId});
+            modelBuilder.Entity<Assignment>().HasKey(A => new {A.AssignmentID});
 
             modelBuilder.Entity<User>()
                 .HasAlternateKey(user => new { user.FirstName, user.LastName});
             modelBuilder.Entity<Gift>()
-                .HasAlternateKey(gift => new {gift.Title, gift.UserId});
-            modelBuilder.Entity<Group>()
-                .HasAlternateKey(group => new {group.Name});
-            modelBuilder.Entity<Assignment>()
-                .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
+                 .HasAlternateKey(gift => new {gift.Title, gift.UserId});
+            // modelBuilder.Entity<Group>()
+            // //     .HasAlternateKey(group => new {group.Name});
+            // modelBuilder.Entity<Assignment>()
+            //     .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
 
             modelBuilder.Entity<User>().HasData(DbInitializer.Users());
             modelBuilder.Entity<Group>().HasData(DbInitializer.Groups());

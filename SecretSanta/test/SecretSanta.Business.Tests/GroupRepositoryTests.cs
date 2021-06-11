@@ -36,7 +36,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GetItem_WithBadId_ReturnsNull()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new GroupRepository(context);
 
             Group? user = sut.GetItem(-1);
 

@@ -12,6 +12,8 @@ namespace SecretSanta.Data
         {
             Giver = giver ?? throw new ArgumentNullException(nameof(giver));
             Receiver = recipient ?? throw new ArgumentNullException(nameof(recipient));
+
+            GiverAndReceiver = Giver.FirstName +" "+ Receiver.FirstName;
         }
 
         public Assignment()

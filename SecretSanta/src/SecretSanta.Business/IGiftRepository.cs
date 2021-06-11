@@ -11,5 +11,4 @@ namespace SecretSanta.Business
         Gift Create(Gift item);
         void Save(Gift item);
     }
-
 }

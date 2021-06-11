@@ -12,7 +12,6 @@ namespace SecretSanta.Business
         private DbContext Context { get; }
         public GroupRepository(DbContext dbContext)
             => Context = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-
         
         public Group Create(Group item)
         {
@@ -20,7 +19,6 @@ namespace SecretSanta.Business
             {
                 throw new ArgumentNullException(nameof(item));
             }
-
             Context.Groups.Add(item);
             Context.SaveChanges();
             return item;
@@ -57,16 +55,15 @@ namespace SecretSanta.Business
 
         public AssignmentResult GenerateAssignments(int groupId)
         {
-
             Group? @group = GetItem(groupId);
-            
+
             if (group is null)
             {
                 return AssignmentResult.Error("Group not found");
             }
 
             Random random = new();
-            var groupUsers = new List<User>(group.Users);
+            var groupUsers = new List<User>(group.Users.ToList());
 
             if (groupUsers.Count < 3)
             {
@@ -81,14 +78,14 @@ namespace SecretSanta.Business
                 users.Add(groupUsers[index]);
                 groupUsers.RemoveAt(index);
             }
-
-            //The assignments are created by linking the current user to the next user.
             group.Assignments.Clear();
+            
             for(int i = 0; i < users.Count; i++)
             {
                 int endIndex = (i + 1) % users.Count;
-               // group.Assignments.Add(new Assignment(){GroupId = group.GroupId, Giver = users[i], Receiver =  users[endIndex]});
+                group.Assignments.Add(new Assignment(){Giver = Context.Users.Find(users[i].UserId), Receiver =  Context.Users.Find(users[endIndex].UserId)});
             }
+            
             Save(group);
             return AssignmentResult.Success();
         }
