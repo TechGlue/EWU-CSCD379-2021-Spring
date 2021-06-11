@@ -55,30 +55,6 @@ namespace SecretSanta.Business
             Context.SaveChanges();
         }
 
-        // public bool AddUser(int groupId, int userId)
-        // {
-        //     using var dbContext = new DbContext();
-        //
-        //     Group? @group = dbContext.Groups.Find(groupId);
-        //     User? @user = dbContext.Users.Find(userId);
-        //
-        //     if (user is not null && group is not null)
-        //     {
-        //          dbContext.Users.Find(user.UserId).Groups.Add(group);
-        //          dbContext.Groups.Find(group.GroupId).Users.Add(user);
-        //          dbContext.SaveChangesAsync();
-        //          return true;
-        //     }
-        //
-        //     return false;
-        // }
-        //
-        // public List<Group> GetUsers(int groupID)
-        // {
-        //     using var dbContext = new DbContext();
-        //     return dbContext.Groups.ToList();
-        // }
-
         public AssignmentResult GenerateAssignments(int groupId)
         {
 
