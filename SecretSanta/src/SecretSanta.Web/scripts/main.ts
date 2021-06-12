@@ -77,7 +77,7 @@ export function createOrUpdateUser() {
             }
         },
         
-        async addGift()
+        async createGift()
         {
             try{
                 var client = new GiftsClient(apiHost);

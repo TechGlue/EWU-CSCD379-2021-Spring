@@ -34,10 +34,11 @@ namespace SecretSanta.Data
             modelBuilder.Entity<Assignment>().HasKey(a => new {a.AssignmentID});
             modelBuilder.Entity<Gift>().HasKey(g => new {g.Id});
 
+            //setting up alternate keys messing up the edits page. 
             // modelBuilder.Entity<Gift>()
             //      .HasAlternateKey(gift => new {gift.Title, gift.UserId});
-            // // modelBuilder.Entity<Group>()
-            // //     .HasAlternateKey(group => new {group.Name});
+            // modelBuilder.Entity<Group>()
+            //     .HasAlternateKey(group => new {group.Name});
             // modelBuilder.Entity<Assignment>()
             //     .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
 
