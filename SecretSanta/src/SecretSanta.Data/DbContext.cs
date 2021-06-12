@@ -32,10 +32,11 @@ namespace SecretSanta.Data
             modelBuilder.Entity<User>().HasKey(u => new {u.UserId});
             modelBuilder.Entity<Group>().HasKey(g => new {g.GroupId});
             modelBuilder.Entity<Assignment>().HasKey(a => new {a.AssignmentID});
+            modelBuilder.Entity<Gift>().HasKey(g => new {g.Id});
 
-            modelBuilder.Entity<Gift>()
-                 .HasAlternateKey(gift => new {gift.Title, gift.UserId});
-            // modelBuilder.Entity<Group>()
+            // modelBuilder.Entity<Gift>()
+            //      .HasAlternateKey(gift => new {gift.Title, gift.UserId});
+            // // modelBuilder.Entity<Group>()
             // //     .HasAlternateKey(group => new {group.Name});
             // modelBuilder.Entity<Assignment>()
             //     .HasAlternateKey(assignment => new {assignment.GiverAndReceiver});
