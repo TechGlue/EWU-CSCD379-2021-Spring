@@ -23,12 +23,14 @@ namespace SecretSanta.Api.Controllers
         [HttpGet]
         public IEnumerable<Dto.Group> Get()
         {
+            Serilog.Log.Information("Gathering Groups..");
             return GroupRepository.List().Select(x => Dto.Group.ToDto(x)!);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Dto.Group?> Get(int id)
         {
+            Serilog.Log.Information($"Gathering groups at id: {id}");
             Dto.Group? group = Dto.Group.ToDto(GroupRepository.GetItem(id), true);
             if (group is null) return NotFound();
             return group;
@@ -39,6 +41,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Delete(int id)
         {
+            Serilog.Log.Information("Delete invoked: " + id);
             if (GroupRepository.Remove(id))
             {
                 return Ok();
@@ -51,6 +54,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType(typeof(Dto.Group), (int)HttpStatusCode.OK)]
         public ActionResult<Dto.Group?> Post([FromBody] Dto.Group group)
         {
+            Serilog.Log.Information("Post for groups invoked.. ");
             return Dto.Group.ToDto(GroupRepository.Create(Dto.Group.FromDto(group)!));
         }
 
@@ -60,6 +64,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Put(int id, [FromBody] Dto.UpdateGroup? group)
         {
+            Serilog.Log.Information("Put for groups invoked.. ID: " + id);
             Data.Group? foundGroup = GroupRepository.GetItem(id);
             if (foundGroup is not null)
             {
@@ -77,6 +82,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Remove(int id, [FromBody] int userId)
         {
+            Serilog.Log.Information("Remove for groups invoked..");
             Data.Group? foundGroup = GroupRepository.GetItem(id);
             if (foundGroup is not null)
             {
@@ -96,6 +102,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Add(int id, [FromBody] int userId)
         {
+            Serilog.Log.Information("Add for groups invoked..");
             Data.Group? foundGroup = GroupRepository.GetItem(id);
             Data.User? foundUser = UserRepository.GetItem(userId);
             if (foundGroup is not null && foundUser is not null)
@@ -115,6 +122,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         public ActionResult CreateAssignments(int id)
         {
+            Serilog.Log.Information("Create assignments in groups invoked..");
             AssignmentResult result = GroupRepository.GenerateAssignments(id);
             
             if (!result.IsSuccess)

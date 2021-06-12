@@ -20,12 +20,14 @@ namespace SecretSanta.Api.Controllers
         [HttpGet]
         public IEnumerable<Dto.User> Get()
         {
+            Serilog.Log.Information("Gathering users...");
             return Repository.List().Select(x => Dto.User.ToDto(x)!);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Dto.User?> Get(int id)
         {
+            Serilog.Log.Information("Get in users invoked ID: " + id);
             Dto.User? user = Dto.User.ToDto(Repository.GetItem(id));
             if (user is null) return NotFound();
             return user;
@@ -36,6 +38,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Delete(int id)
         {
+            Serilog.Log.Information("Delete in Users Invoked...ID: " + id);
             if (Repository.Remove(id))
             {
                 return Ok();
@@ -48,6 +51,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType(typeof(Dto.User), (int)HttpStatusCode.OK)]
         public ActionResult<Dto.User?> Post([FromBody] Dto.User user)
         {
+            Serilog.Log.Information("Post in Users invoked");
             return Dto.User.ToDto(Repository.Create(Dto.User.FromDto(user)!));
         }
 
@@ -57,6 +61,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Put(int id, [FromBody] Dto.UpdateUser? user)
         {
+            Serilog.Log.Information("Put in Users invoked..");
             Data.User? foundUser = Repository.GetItem(id);
             if (foundUser is not null)
             {
