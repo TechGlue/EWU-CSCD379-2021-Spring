@@ -1,5 +1,7 @@
 # Assignment 9 & 10
+[![Assignment Build And Test](https://github.com/TechGlue/EWU-CSCD379-2021-Spring/actions/workflows/AssignmentBuild.yml/badge.svg?branch=Assignment-9)](https://github.com/TechGlue/EWU-CSCD379-2021-Spring/actions/workflows/AssignmentBuild.yml)
 ![E2E](E2E.gif)
+
 
 
 ## Overview
