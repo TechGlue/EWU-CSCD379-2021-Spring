@@ -3,6 +3,7 @@
 ## Overview
 
 In this assignment we are going to build "complete" the SecretSanta project. As discussed in class on Thursday, you have two weeks to complete the assignment which is worth "double the points".
+![E2E](E2E.gif)
 
 ## Assignment
 
