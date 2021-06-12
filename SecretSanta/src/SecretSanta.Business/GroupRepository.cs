@@ -71,7 +71,7 @@ namespace SecretSanta.Business
             }
 
             var users = new List<User>();
-            //Put the users in a random order
+            
             while(groupUsers.Count > 0)
             {
                 int index = random.Next(groupUsers.Count);
