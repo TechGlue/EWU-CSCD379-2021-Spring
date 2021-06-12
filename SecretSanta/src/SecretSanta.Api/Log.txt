@@ -14,3 +14,191 @@
 2021-06-11 22:33:34.904 -07:00 [INF] Gather users...
 2021-06-11 22:34:36.054 -07:00 [INF] Starting build....build running
 2021-06-11 22:36:54.735 -07:00 [INF] Starting build....build running
+2021-06-11 22:44:48.497 -07:00 [INF] Gathering users...
+2021-06-11 22:44:52.722 -07:00 [INF] Delete in Users Invoked...ID: 1
+2021-06-11 22:44:52.885 -07:00 [INF] Gathering users...
+2021-06-11 22:45:00.576 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:45:00.836 -07:00 [INF] Gathering users...
+2021-06-11 22:45:07.513 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:45:07.747 -07:00 [INF] Gathering users...
+2021-06-11 22:45:15.039 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:45:15.274 -07:00 [INF] Gathering users...
+2021-06-11 22:45:18.048 -07:00 [INF] Delete in Users Invoked...ID: 6
+2021-06-11 22:45:18.061 -07:00 [INF] Gathering users...
+2021-06-11 22:45:19.472 -07:00 [INF] Get in users invoked ID: 5
+2021-06-11 22:45:25.724 -07:00 [INF] Put in Users with ID invoked..
+2021-06-11 22:45:25.959 -07:00 [INF] Gathering users...
+2021-06-11 22:45:28.802 -07:00 [INF] Delete in Users Invoked...ID: 5
+2021-06-11 22:45:28.811 -07:00 [INF] Gathering users...
+2021-06-11 22:45:31.120 -07:00 [INF] Delete in Users Invoked...ID: 4
+2021-06-11 22:45:31.131 -07:00 [INF] Gathering users...
+2021-06-11 22:45:33.345 -07:00 [INF] Gathering Groups..
+2021-06-11 22:45:39.842 -07:00 [INF] Post for groups invoked.. 
+2021-06-11 22:45:40.091 -07:00 [INF] Gathering Groups..
+2021-06-11 22:45:41.449 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:45:41.483 -07:00 [INF] Gathering users...
+2021-06-11 22:45:44.958 -07:00 [INF] Gathering Groups..
+2021-06-11 22:45:46.016 -07:00 [INF] Gathering users...
+2021-06-11 22:45:52.341 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:45:52.556 -07:00 [INF] Gathering users...
+2021-06-11 22:45:54.167 -07:00 [INF] Gathering Groups..
+2021-06-11 22:45:55.463 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:45:55.482 -07:00 [INF] Gathering users...
+2021-06-11 22:45:56.544 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:45:56.579 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:45:58.967 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:45:58.980 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:01.342 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:46:01.353 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:04.281 -07:00 [INF] Remove for groups invoked..
+2021-06-11 22:46:04.295 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:06.063 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:46:06.095 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:07.156 -07:00 [INF] Create assignments in groups invoked..
+2021-06-11 22:46:07.189 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:16.284 -07:00 [INF] Put for groups invoked.. ID: 3
+2021-06-11 22:46:16.294 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:18.170 -07:00 [INF] Gathering Groups..
+2021-06-11 22:46:19.744 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:46:19.759 -07:00 [INF] Gathering users...
+2021-06-11 22:50:38.228 -07:00 [INF] Gathering users...
+2021-06-11 22:50:47.220 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:50:47.441 -07:00 [INF] Gathering users...
+2021-06-11 22:50:53.724 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:50:53.935 -07:00 [INF] Gathering users...
+2021-06-11 22:51:02.168 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:51:02.395 -07:00 [INF] Gathering users...
+2021-06-11 22:51:07.331 -07:00 [INF] Delete in Users Invoked...ID: 3
+2021-06-11 22:51:07.346 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at SecretSanta.Business.UserRepository.Remove(Int32 id) in /Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Business/UserRepository.cs:line 41
+   at SecretSanta.Api.Controllers.UsersController.Delete(Int32 id) in /Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Api/Controllers/UsersController.cs:line 42
+   at lambda_method92(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-06-11 22:51:15.239 -07:00 [INF] Delete in Users Invoked...ID: 8
+2021-06-11 22:51:15.249 -07:00 [INF] Gathering users...
+2021-06-11 22:51:18.248 -07:00 [INF] Get in users invoked ID: 10
+2021-06-11 22:51:19.597 -07:00 [INF] Gathering users...
+2021-06-11 22:51:21.977 -07:00 [INF] Delete in Users Invoked...ID: 9
+2021-06-11 22:51:21.986 -07:00 [INF] Gathering users...
+2021-06-11 22:51:24.650 -07:00 [INF] Delete in Users Invoked...ID: 2
+2021-06-11 22:51:24.655 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at SecretSanta.Business.UserRepository.Remove(Int32 id) in /Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Business/UserRepository.cs:line 41
+   at SecretSanta.Api.Controllers.UsersController.Delete(Int32 id) in /Users/luis/CSCD379/EWU-CSCD379-2021-Spring/SecretSanta/src/SecretSanta.Api/Controllers/UsersController.cs:line 42
+   at lambda_method92(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-06-11 22:52:51.228 -07:00 [INF] Starting build....build running
+2021-06-11 22:52:55.248 -07:00 [INF] Get in users invoked ID: 2
+2021-06-11 22:52:58.253 -07:00 [INF] Put in Users with ID invoked..
+2021-06-11 22:52:58.553 -07:00 [INF] Gathering users...
+2021-06-11 22:53:01.772 -07:00 [INF] Delete in Users Invoked...ID: 2
+2021-06-11 22:53:01.786 -07:00 [INF] Gathering users...
+2021-06-11 22:53:04.021 -07:00 [INF] Get in users invoked ID: 1
+2021-06-11 22:53:07.989 -07:00 [INF] Put in Users with ID invoked..
+2021-06-11 22:53:08.177 -07:00 [INF] Gathering users...
+2021-06-11 22:53:11.011 -07:00 [INF] Delete in Users Invoked...ID: 1
+2021-06-11 22:53:11.020 -07:00 [INF] Gathering users...
+2021-06-11 22:53:17.703 -07:00 [INF] Gathering Groups..
+2021-06-11 22:53:19.914 -07:00 [INF] Delete invoked: 1
+2021-06-11 22:53:19.928 -07:00 [INF] Gathering Groups..
+2021-06-11 22:53:31.965 -07:00 [INF] Starting build....build running
+2021-06-11 22:55:09.533 -07:00 [INF] Gathering users...
+2021-06-11 22:55:15.652 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:55:15.938 -07:00 [INF] Gathering users...
+2021-06-11 22:55:23.103 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:55:23.340 -07:00 [INF] Gathering users...
+2021-06-11 22:55:36.532 -07:00 [INF] Post in Users with user invoked..
+2021-06-11 22:55:36.775 -07:00 [INF] Gathering users...
+2021-06-11 22:55:41.053 -07:00 [INF] Get in users invoked ID: 1
+2021-06-11 22:55:44.332 -07:00 [INF] Put in Users with ID invoked..
+2021-06-11 22:55:44.559 -07:00 [INF] Gathering users...
+2021-06-11 22:55:46.447 -07:00 [INF] Get in users invoked ID: 1
+2021-06-11 22:55:47.695 -07:00 [INF] Gathering users...
+2021-06-11 22:55:49.712 -07:00 [INF] Delete in Users Invoked...ID: 1
+2021-06-11 22:55:49.724 -07:00 [INF] Gathering users...
+2021-06-11 22:55:53.058 -07:00 [INF] Gathering Groups..
+2021-06-11 22:56:00.121 -07:00 [INF] Post for groups invoked.. 
+2021-06-11 22:56:00.330 -07:00 [INF] Gathering Groups..
+2021-06-11 22:56:01.530 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:01.544 -07:00 [INF] Gathering users...
+2021-06-11 22:56:04.616 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:56:04.650 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:06.612 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:56:06.625 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:08.528 -07:00 [INF] Create assignments in groups invoked..
+2021-06-11 22:56:08.538 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:10.874 -07:00 [INF] Add for groups invoked..
+2021-06-11 22:56:10.886 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:11.866 -07:00 [INF] Create assignments in groups invoked..
+2021-06-11 22:56:11.895 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:20.747 -07:00 [INF] Put for groups invoked.. ID: 3
+2021-06-11 22:56:20.756 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:22.995 -07:00 [INF] Remove for groups invoked..
+2021-06-11 22:56:23.009 -07:00 [INF] Gathering groups at id: 3
+2021-06-11 22:56:24.472 -07:00 [INF] Gathering Groups..
+2021-06-11 22:56:27.595 -07:00 [INF] Delete invoked: 1
+2021-06-11 22:56:27.608 -07:00 [INF] Gathering Groups..
+2021-06-11 23:00:57.408 -07:00 [INF] Starting build....build running

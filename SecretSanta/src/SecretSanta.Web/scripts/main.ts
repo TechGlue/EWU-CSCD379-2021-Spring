@@ -77,16 +77,16 @@ export function createOrUpdateUser() {
             }
         },
         
-        async createGift()
-        {
-            try{
-                var client = new GiftsClient(apiHost);
-                await client.put(this.user.id, this.gift)
-                
-            }catch(error){
-                console.log(error)
-            }
-        },
+        // async createGift()
+        // {
+        //     try{
+        //         var client = new GiftsClient(apiHost);
+        //         await client.put(this.user.id, this.gift)
+        //        
+        //     }catch(error){
+        //         console.log(error)
+        //     }
+        // },
         async loadData() {
             const pathnameSplit = window.location.pathname.split('/');
             const id = pathnameSplit[pathnameSplit.length - 1];

@@ -1,9 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace SecretSanta.Data
@@ -19,7 +14,6 @@ namespace SecretSanta.Data
         public DbSet<Group> Groups => Set<Group>();
         public DbSet<User> Users => Set<User>();
         public DbSet<Gift> Gifts => Set<Gift>();
-        
       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
