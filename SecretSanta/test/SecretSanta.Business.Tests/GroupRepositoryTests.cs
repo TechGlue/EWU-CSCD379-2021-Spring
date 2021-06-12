@@ -81,8 +81,8 @@ namespace SecretSanta.Business.Tests
 
             ICollection<Group> users = sut.List();
 
-            Assert.AreEqual(MockData.Groups.Count, users.Count);
-            foreach(var mockGroup in MockData.Groups.Values)
+            Assert.AreEqual(context.Groups.Count(), users.Count);
+            foreach(var mockGroup in context.Groups)
             {
                 Assert.IsNotNull(users.SingleOrDefault(x => x.Name == mockGroup.Name));
             }
@@ -110,7 +110,6 @@ namespace SecretSanta.Business.Tests
         {
             DbContext context = new DbContext();
             GroupRepository sut = new(context);
-
             sut.Save(null!);
         }
 
