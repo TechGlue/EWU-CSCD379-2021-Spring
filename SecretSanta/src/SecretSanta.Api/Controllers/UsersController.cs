@@ -51,7 +51,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType(typeof(Dto.User), (int)HttpStatusCode.OK)]
         public ActionResult<Dto.User?> Post([FromBody] Dto.User user)
         {
-            Serilog.Log.Information("Post in Users invoked");
+            Serilog.Log.Information("Post in Users with user invoked..");
             return Dto.User.ToDto(Repository.Create(Dto.User.FromDto(user)!));
         }
 
@@ -61,7 +61,7 @@ namespace SecretSanta.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult Put(int id, [FromBody] Dto.UpdateUser? user)
         {
-            Serilog.Log.Information("Put in Users invoked..");
+            Serilog.Log.Information("Put in Users with ID invoked..");
             Data.User? foundUser = Repository.GetItem(id);
             if (foundUser is not null)
             {
