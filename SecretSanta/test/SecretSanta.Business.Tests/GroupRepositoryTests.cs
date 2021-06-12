@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SecretSanta.Data;
 using DbContext = SecretSanta.Data.DbContext;
 
+
 namespace SecretSanta.Business.Tests
 {
     [TestClass]
@@ -43,8 +44,8 @@ namespace SecretSanta.Business.Tests
         public void GetItem_WithBadId_ReturnsNull()
         {
             
-            DbContext context = new DbContext();
-            GroupRepository sut = new GroupRepository(context);
+            using var context = new DbContext();
+            GroupRepository sut = new (context);
 
             Group? user = sut.GetItem(-1);
 
@@ -54,11 +55,11 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GetItem_WithValidId_ReturnsGroup()
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
             sut.Create(new() 
             { 
-                GroupId = 42,
+                GroupId = 423,
                 Name = "Group",
             });
 
@@ -71,11 +72,11 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void List_WithGroups_ReturnsAllGroup()
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
             sut.Create(new()
             {
-                GroupId = 42,
+                GroupId = 422,
                 Name = "Group",
             });
 
@@ -93,11 +94,11 @@ namespace SecretSanta.Business.Tests
         [DataRow(42, true)]
         public void Remove_WithInvalidId_ReturnsTrue(int id, bool expected)
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
             sut.Create(new()
             {
-                GroupId = 42,
+                GroupId = 4322,
                 Name = "Group"
             });
 
@@ -108,7 +109,7 @@ namespace SecretSanta.Business.Tests
         [ExpectedException(typeof(ArgumentNullException))]
         public void Save_NullItem_ThrowsArgumentException()
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
             sut.Save(null!);
         }
@@ -116,7 +117,7 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void Save_WithValidItem_SavesItem()
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
 
             sut.Save(new Group() { GroupId = 42 });
@@ -127,7 +128,7 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GenerateAssignments_WithInvalidId_ReturnsError()
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
 
             AssignmentResult result = sut.GenerateAssignments(42);
@@ -138,7 +139,7 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GenerateAssignments_WithLessThanThreeUsers_ReturnsError()
         {
-            DbContext context = new DbContext();
+            using var context = new DbContext();
             GroupRepository sut = new(context);
             sut.Create(new()
             {
@@ -154,8 +155,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GenerateAssignments_WithValidGroup_CreatesAssignments()
         {
-            DbContext context = new DbContext();
-            GroupRepository sut = new(context);
+            using var context = new DbContext();
+            GroupRepository sut = new (context);
             Group group = sut.Create(new()
             {
                 GroupId = 42,
