@@ -116,6 +116,7 @@ namespace SecretSanta.Api.Controllers
         public ActionResult CreateAssignments(int id)
         {
             AssignmentResult result = GroupRepository.GenerateAssignments(id);
+            
             if (!result.IsSuccess)
             {
                 return BadRequest(result.ErrorMessage);

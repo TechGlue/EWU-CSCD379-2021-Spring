@@ -1,27 +1,33 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SecretSanta.Data;
+using DbContext = SecretSanta.Data.DbContext;
 
 namespace SecretSanta.Business.Tests
 {
     [TestClass]
     public class GroupRepositoryTests
     {
+        
+        
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void Create_NullItem_ThrowsArgumentException()
         {
-            GroupRepository sut = new();
+            using DbContext context = new DbContext();
+            GroupRepository sut = new(context);
 
             sut.Create(null!);
         }
 
         [TestMethod]
-        public void Create_WithItem_CanGetItem()
+        public async Task Create_WithItem_CanGetItem()
         {
-            GroupRepository sut = new();
+            using var context = new DbContext();
+            GroupRepository sut = new(context);
             Group user = new()
             {
                 GroupId = 42
@@ -36,6 +42,7 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GetItem_WithBadId_ReturnsNull()
         {
+            
             DbContext context = new DbContext();
             GroupRepository sut = new GroupRepository(context);
 
@@ -47,7 +54,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GetItem_WithValidId_ReturnsGroup()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
             sut.Create(new() 
             { 
                 GroupId = 42,
@@ -63,7 +71,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void List_WithGroups_ReturnsAllGroup()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
             sut.Create(new()
             {
                 GroupId = 42,
@@ -84,7 +93,8 @@ namespace SecretSanta.Business.Tests
         [DataRow(42, true)]
         public void Remove_WithInvalidId_ReturnsTrue(int id, bool expected)
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
             sut.Create(new()
             {
                 GroupId = 42,
@@ -98,7 +108,8 @@ namespace SecretSanta.Business.Tests
         [ExpectedException(typeof(ArgumentNullException))]
         public void Save_NullItem_ThrowsArgumentException()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
 
             sut.Save(null!);
         }
@@ -106,7 +117,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void Save_WithValidItem_SavesItem()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
 
             sut.Save(new Group() { GroupId = 42 });
 
@@ -116,7 +128,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GenerateAssignments_WithInvalidId_ReturnsError()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
 
             AssignmentResult result = sut.GenerateAssignments(42);
 
@@ -126,7 +139,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GenerateAssignments_WithLessThanThreeUsers_ReturnsError()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
             sut.Create(new()
             {
                 GroupId = 42,
@@ -141,7 +155,8 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void GenerateAssignments_WithValidGroup_CreatesAssignments()
         {
-            GroupRepository sut = new();
+            DbContext context = new DbContext();
+            GroupRepository sut = new(context);
             Group group = sut.Create(new()
             {
                 GroupId = 42,

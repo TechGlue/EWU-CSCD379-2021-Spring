@@ -19,11 +19,11 @@ namespace SecretSanta.Business
             {
                 throw new ArgumentNullException(nameof(item));
             }
+            
             Context.Groups.Add(item);
             Context.SaveChanges();
             return item;
         }
-
 
         public Group? GetItem(int id)
             => List().FirstOrDefault<Group>(i => i.GroupId == id);
@@ -42,7 +42,7 @@ namespace SecretSanta.Business
             return true;
         }
 
-        public void Save(Group item)
+        public void Save(Group? item)
         {
             if (item is null)
             {
@@ -85,8 +85,8 @@ namespace SecretSanta.Business
                 int endIndex = (i + 1) % users.Count;
                 group.Assignments.Add(new Assignment(){Giver = Context.Users.Find(users[i].UserId), Receiver =  Context.Users.Find(users[endIndex].UserId)});
             }
-            
-            Save(group);
+            Save(@group);
+       
             return AssignmentResult.Success();
         }
     }

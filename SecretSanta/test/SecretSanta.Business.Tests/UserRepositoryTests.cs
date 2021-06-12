@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SecretSanta.Data;
 
+
 namespace SecretSanta.Business.Tests
 {
     [TestClass]
@@ -21,7 +22,9 @@ namespace SecretSanta.Business.Tests
         [TestMethod]
         public void Create_WithItem_CanGetItem()
         {
+            var dbContext = new DbContext();
             UserRepository sut = new();
+            dbContext.Database.EnsureCreated();
             User user = new()
             {
                 UserId = 42
@@ -30,7 +33,7 @@ namespace SecretSanta.Business.Tests
             User createdUser = sut.Create(user);
 
             User? retrievedUser = sut.GetItem(createdUser.UserId);
-            Assert.AreEqual(user, retrievedUser);
+            Assert.AreEqual(user.FirstName, retrievedUser);
         }
 
         [TestMethod]
