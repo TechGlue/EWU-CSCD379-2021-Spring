@@ -8,7 +8,7 @@ import { fas, faThList } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
-import { Group, GroupsClient, User, UsersClient } from '../Api/SecretSanta.Api.Client.g';
+import {Gift, GiftsClient, Group, GroupsClient, User, UsersClient} from '../Api/SecretSanta.Api.Client.g';
 
 library.add(fas, far, fab);
 dom.watch();
@@ -57,6 +57,7 @@ export function setupUsers() {
 export function createOrUpdateUser() {
     return {
         user: {} as User,
+        gift: {} as Gift,
         async create() {
             try {
                 const client = new UsersClient(apiHost);
@@ -73,6 +74,17 @@ export function createOrUpdateUser() {
                 window.location.href='/users';
             } catch (error) {
                 console.log(error);
+            }
+        },
+        
+        async addGift()
+        {
+            try{
+                var client = new GiftsClient(apiHost);
+                await client.put(this.user.id, this.gift)
+                
+            }catch(error){
+                console.log(error)
             }
         },
         async loadData() {
